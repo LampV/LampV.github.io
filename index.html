@@ -1,96 +1,1049 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-  <title>Kiwi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kiwi">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lampv.github.io","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="This is my blog on Github">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kiwi Book">
 <meta property="og:url" content="http://lampv.github.io/index.html">
-<meta property="og:site_name" content="Kiwi">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="Kiwi Book">
+<meta property="og:description" content="This is my blog on Github">
+<meta property="og:locale" content="en_US">
 <meta property="article:author" content="Jiawei Wu">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Kiwi" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<link rel="canonical" href="http://lampv.github.io/">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Kiwi</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">南风知我意</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://LampV.github.io"></form>
-      </div>
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false
+  };
+</script>
+
+  <title>Kiwi Book</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/13/hello-world/" class="article-date">
-  <time datetime="2020-03-13T12:47:35.715Z" itemprop="datePublished">2020-03-13</time>
-</a>
-    
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kiwi Book</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">南风知我意</p>
   </div>
-  <div class="article-inner">
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>Schedule</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
     
-    
-      <header class="article-header">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/hello-world/">Hello World</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-6%EF%BC%9A%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Introduction-6%EF%BC%9A%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/" class="post-title-link" itemprop="url">Introduction-6：迭代器与生成器</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:39:31 / Modified: 21:40:32" itemprop="dateCreated datePublished" datetime="2020-03-13T21:39:31+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+          <h2 id="9-8-Iterators"><a href="#9-8-Iterators" class="headerlink" title="9.8. Iterators"></a>9.8. Iterators</h2><blockquote>
+<p>Behind the scenes, the <a href="https://docs.python.org/3/reference/compound_stmts.html#for" target="_blank" rel="noopener"><code>for</code></a> statement calls <a href="https://docs.python.org/3/library/functions.html#iter" target="_blank" rel="noopener"><code>iter()</code></a> on the container object. The function returns an iterator object that defines the method <a href="https://docs.python.org/3/library/stdtypes.html#iterator.__next__" target="_blank" rel="noopener"><code>__next__()</code></a> which accesses elements in the container one at a time. When there are no more elements, <a href="https://docs.python.org/3/library/stdtypes.html#iterator.__next__" target="_blank" rel="noopener"><code>__next__()</code></a> raises a <a href="https://docs.python.org/3/library/exceptions.html#StopIteration" target="_blank" rel="noopener"><code>StopIteration</code></a> exception which tells the <code>for</code> loop to terminate. </p>
+</blockquote>
+<p>当我们调用<code>for</code>进行循环的时候，实际上是调用了<code>iter()</code>函数。这个函数是一个<code>built-in</code>函数，返回一个通过<code>__next__()</code>方法定义的迭代器。通过特殊的异常来提示<code>for</code>循环到达结尾。</p>
+<blockquote>
+<p>You can call the <a href="https://docs.python.org/3/library/stdtypes.html#iterator.__next__" target="_blank" rel="noopener"><code>__next__()</code></a> method using the <a href="https://docs.python.org/3/library/functions.html#next" target="_blank" rel="noopener"><code>next()</code></a> built-in function</p>
+</blockquote>
+<p>通过使用内建函数<code>next()</code>，可以手动调用<code>__next__()</code>方法，获得迭代器的下一个对象。</p>
+<blockquote>
+<p>Define an <a href="https://docs.python.org/3/reference/datamodel.html#object.__iter__" target="_blank" rel="noopener"><code>__iter__()</code></a> method which returns an object with a <a href="https://docs.python.org/3/library/stdtypes.html#iterator.__next__" target="_blank" rel="noopener"><code>__next__()</code></a> method. If the class defines <code>__next__()</code>, then <a href="https://docs.python.org/3/reference/datamodel.html#object.__iter__" target="_blank" rel="noopener"><code>__iter__()</code></a> can just return <code>self</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Reverse</span>:</span></span><br><span class="line">    <span class="string">"""Iterator for looping over a sequence backwards."""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        self.data = data</span><br><span class="line">        self.index = len(data)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.index == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line">        self.index = self.index - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> self.data[self.index]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><code>__iter__()</code>方法应该返回一个可以调用<code>__next__()</code>方法的对象，但是如果已经有了<code>__next__()</code>方法，则返回自己即可。</p>
+<p>事实上<code>__iter__()</code>和<code>__next__()</code>当然可以分开写，<code>__iter__()</code>方法也不是必须返回<code>self</code>，例如：</p>
+<h3 id="关于Iterator的测试"><a href="#关于Iterator的测试" class="headerlink" title="关于Iterator的测试"></a>关于Iterator的测试</h3><h4 id="官方例子"><a href="#官方例子" class="headerlink" title="官方例子"></a>官方例子</h4><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Reverse</span>:</span></span><br><span class="line">    <span class="string">"""Iterator for looping over a sequence backwards."""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        self.data = data</span><br><span class="line">        self.index = len(data)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.index == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line">        self.index = self.index - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> self.data[self.index]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这个类是官方文档提供的示例，实现了<code>__iter__()</code>方法和<code>__next__()</code>方法，因此是一个合格的迭代器。按照之前的理解，通过<code>iter()</code>函数可以获得这个迭代器对象，通过<code>next()</code>方法可以手动获得其下一个值。</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>rev = Reverse(<span class="string">'spam'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>iter(rev)</span><br><span class="line">&lt;__main__.Reverse object at <span class="number">0x00A1DB50</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> char <span class="keyword">in</span> rev:</span><br><span class="line"><span class="meta">... </span>    print(char)</span><br><span class="line">...</span><br><span class="line">m</span><br><span class="line">a</span><br><span class="line">p</span><br><span class="line">s</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="next-方法"><a href="#next-方法" class="headerlink" title="__next__()方法"></a><code>__next__()</code>方法</h4><p>事实上，通过上述的官方例子就能看出，<code>__next__()</code>方法是控制<code>for</code>循环（或者手动调用<code>next()</code>函数）效果的核心。对于一个需要迭代的对象，通过修改其<code>__next__()</code>方法，就可以修改迭代的表现效果；对于看似无法迭代的对象，通过添加<code>__next__()</code> 方法就可以获取其下一个值。</p>
+<h4 id="iter-方法"><a href="#iter-方法" class="headerlink" title="__iter__()方法"></a><code>__iter__()</code>方法</h4><p><code>__iter__()</code>方法在这段代码中似乎没有发挥什么实质性的作用。那么能不能把<code>__iter__()</code>去掉呢？</p>
+<p>在<code>Reverse</code>类中删除<code>__iter__()</code>方法，测试结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>rsit = Reverse(<span class="string">'asd'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(rsit)</span><br><span class="line"><span class="string">'d'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> rsit:</span><br><span class="line"><span class="meta">... </span>    print(s)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'Reverse'</span> object <span class="keyword">is</span> <span class="keyword">not</span> iterable</span><br></pre></td></tr></table></figure>
+
+<p>显然，仅有<code>__next__()</code>方法只能获取下一个值，但是不能让解释器理解他有获取下一个值的功能。</p>
+<p><code>__iter__()</code>方法是不是只能返回<code>self</code>对象呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>r = Reverse(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> r:</span><br><span class="line"><span class="meta">... </span>    print(s)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">c</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> r:</span><br><span class="line"><span class="meta">... </span>    print(s)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>我们发现，这个对象只能迭代一次。因为在<code>__next__()</code>方法的实现中，<code>index</code>是指示是否抛出迭代结束异常的关键，但是在迭代一次之后并没有重置。能不能在<code>__iter__()</code>方法返回迭代器的时候不是简单返回自身，还会重置这个<code>index</code>呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.index = len(self.data)</span><br><span class="line">    <span class="keyword">return</span> self</span><br></pre></td></tr></table></figure>
+
+<p>将<code>__iter__()</code>方法修改为如上所示，每次被调用的时候就重置<code>index</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>r = Reverse(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> r: print(s)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">c</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> r: print(s)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">c</span><br><span class="line">b</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，效果和我们预期的一致，即：<code>for</code>循环会通过<code>__iter__()</code>方法获得这个对象的迭代器，并通过<code>__next__()</code>方法来遍历迭代器。因此，如果有什么每次获取迭代器都需要做的事，就放在<code>__iter__()</code>方法里面就可以了。</p>
+<h4 id="拆分-iter-与-next"><a href="#拆分-iter-与-next" class="headerlink" title="拆分__iter__()与__next__()"></a>拆分<code>__iter__()</code>与<code>__next__()</code></h4><p>文档中说，如果这个实例自己就有<code>__next__()</code>方法，<code>__iter__()</code>方法可以返回实例自身。那么，如果没有呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ReverseIt</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        self.data = data</span><br><span class="line">        self.index = len(data)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.index == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line">        self.index = self.index - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> self.data[self.index]</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ItWrapper</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, str_a, str_b)</span>:</span></span><br><span class="line">        self.s = str_a + str_b</span><br><span class="line">        self.it = ReverseIt(self.s)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.it.index = len(self.it.data)</span><br><span class="line">        <span class="keyword">return</span> self.it</span><br></pre></td></tr></table></figure>
+
+<p>如果如图所示定义类，是不是能正常工作呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> myit:</span><br><span class="line"><span class="meta">... </span>    print(s)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到，只要<code>__iter__()</code>方法返回的是一个拥有<code>__next__()</code>方法的对象，就可以被<code>for</code>调用，具体实现细节<code>for</code>并不关心。</p>
+<h4 id="Iterator-与-Iterable"><a href="#Iterator-与-Iterable" class="headerlink" title="Iterator 与 Iterable"></a>Iterator 与 Iterable</h4><p>依然使用上述例子，我们可以看到：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>myit = ItWrapper(<span class="string">'123'</span>, <span class="string">'cba'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(myit)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'ItWrapper'</span> object <span class="keyword">is</span> <span class="keyword">not</span> an iterator</span><br></pre></td></tr></table></figure>
+
+<p>没有 <code>__next__</code>方法的无法使用<code>next</code>函数，不是<code>iterator</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>rsit = iter(myit)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> s <span class="keyword">in</span> rsit:</span><br><span class="line"><span class="meta">... </span>    print(s)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'ReverseIt'</span> object <span class="keyword">is</span> <span class="keyword">not</span> iterable</span><br></pre></td></tr></table></figure>
+
+<p>没有 <code>__iter__</code>方法的无法使用<code>iter</code>函数，不是<code>iterable</code></p>
+<p>那么什么是<code>iterable</code>，什么是<code>iterator</code>呢？</p>
+<ul>
+<li><p><code>iterable</code></p>
+<blockquote>
+<p><em>class</em> <code>collections.abc.``Iterable</code></p>
+<p>ABC for classes that provide the <a href="https://docs.python.org/3/reference/datamodel.html#object.__iter__" target="_blank" rel="noopener"><code>__iter__()</code></a> method.</p>
+</blockquote>
+</li>
+<li><p><code>iterator</code></p>
+<blockquote>
+<p>The iterator objects themselves are required to support the following two methods, which together form the <em>iterator protocol</em>:</p>
+<ul>
+<li><p><code>iterator.``__iter__</code>() </p>
+<p>Return the iterator object itself. This is required to allow both containers and iterators to be used with the <a href="https://docs.python.org/3/reference/compound_stmts.html#for" target="_blank" rel="noopener"><code>for</code></a> and <a href="https://docs.python.org/3/reference/expressions.html#in" target="_blank" rel="noopener"><code>in</code></a> statements. </p>
+</li>
+<li><p><code>iterator.``__next__</code>()</p>
+<p>Return the next item from the container. If there are no further items, raise the <a href="https://docs.python.org/3/library/exceptions.html#StopIteration" target="_blank" rel="noopener"><code>StopIteration</code></a>exception. </p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>通俗而言，只要有 <code>__iter__()</code> 方法的都是<code>Iterable</code>，同时实现了<code>__iter__()</code>和<code>__next__()</code>方法的就是<code>Iterator</code>。<code>Iterator</code>必须实现返回<code>self</code>的<code>__iter__()</code>方法，以保证可以直接在<code>Iterator</code>上应用<code>for</code> 。</p>
+<p>可以使用<code>isinstance</code>来判断是不是<code>Iterator</code>和<code>Iterable</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections.abc <span class="keyword">import</span> Iterable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections.abc <span class="keyword">import</span> Iterator</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(myit, Iterable)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(myit, Iterator)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(rsit, Iterable)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(rsit, Iterator)</span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到这两个类都不是<code>Iterator</code>（一个没有<code>__next__()</code>方法，一个没有<code>__iter__()</code>方法），但是只要有<code>__iter__()</code>方法，就是 <code>Iterable</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>rit = Reverse(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(rit, Iterable)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(rit, Iterator)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到<code>Reverse</code>类因为实现了<code>__iter__()</code>方法和<code>__next__()</code>方法，就是<code>Iterator</code>，而<code>Iterator</code>都是<code>Iterable</code>。</p>
+<h2 id="9-9-Generators"><a href="#9-9-Generators" class="headerlink" title="9.9. Generators"></a>9.9. Generators</h2><blockquote>
+<p><a href="https://docs.python.org/3/glossary.html#term-generator" target="_blank" rel="noopener">Generator</a>s are a simple and powerful tool for creating iterators. They are written like regular functions but use the <a href="https://docs.python.org/3/reference/simple_stmts.html#yield" target="_blank" rel="noopener"><code>yield</code></a> statement whenever they want to return data. Each time <a href="https://docs.python.org/3/library/functions.html#next" target="_blank" rel="noopener"><code>next()</code></a> is called on it, the generator resumes where it left off (it remembers all the data values and which statement was last executed).</p>
+<p>What makes generators so compact is that the <a href="https://docs.python.org/3/reference/datamodel.html#object.__iter__" target="_blank" rel="noopener"><code>__iter__()</code></a> and <a href="https://docs.python.org/3/reference/expressions.html#generator.__next__" target="_blank" rel="noopener"><code>__next__()</code></a>methods are created automatically.when generators terminate, they automatically raise <a href="https://docs.python.org/3/library/exceptions.html#StopIteration" target="_blank" rel="noopener"><code>StopIteration</code></a>. </p>
+</blockquote>
+<p>使用<code>yield</code>来返回值，会创建一个生成器。通过自动添加方法和抛出异常，可以快速实现generator</p>
+<h2 id="9-10-Generator-Expressions"><a href="#9-10-Generator-Expressions" class="headerlink" title="9.10. Generator Expressions"></a>9.10. Generator Expressions</h2><blockquote>
+<p>Some simple generators can be coded succinctly as expressions using a syntax similar to list comprehensions but with parentheses instead of square brackets. </p>
+</blockquote>
+<p>在简单创建生成器的时候，可以使用类似列表推导表达式，但是用圆括号包括。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-5%EF%BC%9A%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%9B%B8%E5%85%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Introduction-5%EF%BC%9A%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">Introduction-5：类与类相关</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:22:47 / Modified: 21:40:30" itemprop="dateCreated datePublished" datetime="2020-03-13T21:22:47+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="9-Classes"><a href="#9-Classes" class="headerlink" title="9. Classes"></a>9. Classes</h1><h2 id="9-2-Python-Scopes-and-Namespaces"><a href="#9-2-Python-Scopes-and-Namespaces" class="headerlink" title="9.2. Python Scopes and Namespaces"></a>9.2. Python Scopes and Namespaces</h2><h4 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h4><blockquote>
+<p>A <em>namespace</em> is a mapping from names to objects.</p>
+</blockquote>
+<p>Namespace 是一个从标志符到对象的映射，通常由字典实现[^1]。</p>
+<h4 id="attribute"><a href="#attribute" class="headerlink" title="attribute"></a>attribute</h4><blockquote>
+<p>By the way, I use the word <em>attribute</em> for any name following a dot — for example, in the expression <code>z.real</code>, <code>real</code> is an attribute of the object <code>z</code>. </p>
+</blockquote>
+<p>与对象关联的、使用点分法表示的值被称为<code>attribute</code>，常见的表示法为<code>obj.attr</code>， 其中<code>obj</code>是一个对象，而<code>attr</code>是其attribute[^2]。</p>
+<p>对于一个<code>module</code>而言，其下的<code>function</code>的funcname显然也是他的<code>attribute</code>。</p>
+<h4 id="namespace-lifetimes"><a href="#namespace-lifetimes" class="headerlink" title="namespace lifetimes"></a>namespace lifetimes</h4><blockquote>
+<p>Namespaces are created at different moments and have different lifetimes. The namespace containing the built-in names is created when the Python interpreter starts up, and is never deleted. The global namespace for a module is created when the module definition is read in; normally, module namespaces also last until the interpreter quits. The statements executed by the top-level invocation of the interpreter, either read from a script file or interactively, are considered part of a module called <a href="https://docs.python.org/3/library/__main__.html#module-__main__" target="_blank" rel="noopener"><code>__main__</code></a>, so they have their own global namespace. (The built-in names actually also live in a module; this is called <a href="https://docs.python.org/3/library/builtins.html#module-builtins" target="_blank" rel="noopener"><code>builtins</code></a>.)</p>
+<p>The local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function. (Actually, forgetting would be a better way to describe what actually happens.) Of course, recursive invocations each have their own local namespace.</p>
+</blockquote>
+<p><code>built-in</code>的Namespace在最早被创建且整个过程不会被删除；<code>global</code>的Namespace在模块被加载的时候创建，且通常不会被删除；<code>__main__</code>（当前脚本）里面的变量实际上也在一个<code>global</code> Namespace中。<code>local</code>的Napespace是在函数中被创建，在离开函数的时候删除。</p>
+<h4 id="scope"><a href="#scope" class="headerlink" title="scope"></a>scope</h4><blockquote>
+<p>A <em>scope</em> is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.</p>
+<p> At any time during execution, there are at least three nested scopes whose namespaces are directly accessible:</p>
+<ul>
+<li>the innermost scope, which is searched first, contains the local names</li>
+<li>the scopes of any enclosing functions, which are searched starting with the nearest enclosing scope, contains non-local, but also non-global names</li>
+<li>the next-to-last scope contains the current module’s global names</li>
+<li>the outermost scope (searched last) is the namespace containing built-in names</li>
+</ul>
+</blockquote>
+<p>Scope通常是与Namespace对应的概念。<code>namespace</code>是一组变量-对象组成的字典。例如，在一个函数内定义的变量与其名称对应关系构成一个<code>local namespace</code>。而<code>scope</code>则表示和一个<code>namespace</code>对应的 <em>文本区域</em>：例如，在一个函数定义范围内的 <code>文本</code>所定义的变量都属于这个函数的<code>local namespace</code>，因此这个文本范围就是这个函数的 <code>local scope</code>  。</p>
+<p>对于一个变量名，在查找其对应对象的时候需要查阅<code>namespace</code>。不管使用这个变量名位于哪个文本区域(即<code>scope</code>)，都会按顺序查找<code>scope</code> <strong>中的names</strong>。其顺序是:</p>
+<p> <strong>L</strong>ocal - <strong>E</strong>nclosing functions - <strong>G</strong>lobal - <strong>B</strong>uilt-in。[^3]</p>
+<h4 id="global-amp-nonlocal"><a href="#global-amp-nonlocal" class="headerlink" title="global &amp; nonlocal"></a>global &amp; nonlocal</h4><blockquote>
+<p>The <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> statement can be used to indicate that particular variables live in the global scope and should be rebound there; the <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> statement indicates that particular variables live in an enclosing scope and should be rebound there.</p>
+<p>A special quirk of Python is that – if no <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> or <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> statement is in effect – assignments to names always go into the innermost scope.</p>
+<p>To rebind variables found outside of the innermost scope, the <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> statement can be used; if not declared nonlocal, those variables are read-only.</p>
+</blockquote>
+<p>如果没有使用<code>global</code>或者<code>nonlocal</code>，但是在<code>local scope</code>中引用了<code>module-level</code>或者更高级的<code>local</code>（例如：类的方法<code>loacl</code>试图引用类的<code>local</code>）的变量，那么python总是将这个变量理解为最内层的<code>scope</code>。即使能查找到外层同名变量，也只是获取外层变量的值，并不能修改外层变量。</p>
+<p><code>global</code>关键字是用来告诉解释器，将接下来声明的变量当作<code>global</code>级别的变量。如果<code>global namespace</code>中原来没有这个变量，会创建。</p>
+<p><code>nonlocal</code>关键字用来告诉解释器，接下来的变量应该引用最近的<code>enclosing</code>范围的（但不包括<code>global</code>）变量。</p>
+<h3 id="9-2-1-Scopes-and-Namespaces-Example"><a href="#9-2-1-Scopes-and-Namespaces-Example" class="headerlink" title="9.2.1. Scopes and Namespaces Example"></a>9.2.1. Scopes and Namespaces Example</h3><blockquote>
+<p>This is an example demonstrating how to reference the different scopes and namespaces, and how <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> and <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> affect variable binding:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def scope_test():</span><br><span class="line">    def do_local():</span><br><span class="line">        spam &#x3D; &quot;local spam&quot;</span><br><span class="line"></span><br><span class="line">    def do_nonlocal():</span><br><span class="line">        nonlocal spam</span><br><span class="line">        spam &#x3D; &quot;nonlocal spam&quot;</span><br><span class="line"></span><br><span class="line">    def do_global():</span><br><span class="line">        global spam</span><br><span class="line">        spam &#x3D; &quot;global spam&quot;</span><br><span class="line"></span><br><span class="line">    spam &#x3D; &quot;test spam&quot;</span><br><span class="line">    do_local()</span><br><span class="line">    print(&quot;After local assignment:&quot;, spam)</span><br><span class="line">    do_nonlocal()</span><br><span class="line">    print(&quot;After nonlocal assignment:&quot;, spam)</span><br><span class="line">    do_global()</span><br><span class="line">    print(&quot;After global assignment:&quot;, spam)</span><br><span class="line"></span><br><span class="line">scope_test()</span><br><span class="line">print(&quot;In global scope:&quot;, spam)</span><br></pre></td></tr></table></figure>
+
+<p>The output of the example code is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">After local assignment: test spam</span><br><span class="line">After nonlocal assignment: nonlocal spam</span><br><span class="line">After global assignment: nonlocal spam</span><br><span class="line">In global scope: global spam</span><br></pre></td></tr></table></figure>
+
+<p>Note how the <em>local</em> assignment (which is default) didn’t change <em>scope_test*’s binding of *spam</em>. The <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> assignment changed <em>scope_test*’s binding of *spam</em>, and the <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> assignment changed the module-level binding.</p>
+</blockquote>
+<ul>
+<li><p>不使用任何关键字，则变量默认在<code>local</code>域下操作</p>
+<p>在执行了<code>do_local</code>函数之后，<code>func scope_test</code>这个<code>scope</code> 中的变量并没有发生改变。</p>
+<p>如果在<code>do_local</code>中打印，则会打印<code>local spam</code>，因为最先搜索Local scope</p>
+</li>
+<li><p>使用<code>nonlocal</code>关键字，则会到离得最近的<code>enclosing scope</code>中查找变量</p>
+<blockquote>
+<p>Jaglawz: 也就是说内层函数（在本例中就是wrapper啦）会把外层函数（在本例用就是deco啦）作用域里面的对象放到<strong>closure</strong>属性里，以供自己查找？</p>
+<p>Pylego: 是的，但是不是所有外层函数作用域的对象都会放到内层函数的<strong>closure</strong>属性里，仅限自己用到的，这个<strong>closure</strong>就是enclosing作用域啦！</p>
+<p>Jaglawz: 原来enclosing作用域是这样的，明白了。</p>
+</blockquote>
+<p>考虑到 <em>被自己用到的外层函数作用域</em> 也就是 <em>自己要查找的外层函数的作用域</em>，可以简单理解为外层函数的<code>scope</code>就是所谓的<code>nearest enclosing scope</code> [^4]</p>
+<p>注意到<code>spam</code> 是 <code>enclosing scope</code>中已经定义的变量，<code>nonlocal</code>不能引用未定义的变量</p>
+</li>
+<li><p>使用<code>global</code>关键字</p>
+<p><code>global</code>关键字会越过<code>enclosing scope</code>直接查找<code>global scope</code>，所以执行<code>global_spam</code>之后<code>enclosing scope</code>的<code>spam</code>并没有修改。</p>
+<p><code>global</code>关键字不需要<code>global scope</code>中原本就存在这个变量，如果没有，会创建。所以在<code>scope_test</code>域外执行的代码可以直接引用<code>spam</code>。</p>
+</li>
+</ul>
+<h2 id="9-3-A-First-Look-at-Classes"><a href="#9-3-A-First-Look-at-Classes" class="headerlink" title="9.3. A First Look at Classes"></a>9.3. A First Look at Classes</h2><h3 id="9-3-1-Class-Definition-Syntax"><a href="#9-3-1-Class-Definition-Syntax" class="headerlink" title="9.3.1. Class Definition Syntax"></a>9.3.1. Class Definition Syntax</h3><blockquote>
+<p>Class definitions, like function definitions (<a href="https://docs.python.org/3/reference/compound_stmts.html#def" target="_blank" rel="noopener"><code>def</code></a> statements) must be executed before they have any effect.</p>
+<p>When a class definition is left normally (via the end), a <em>class object</em> is created. This is basically a wrapper around the contents of the namespace created by the class definition; we’ll learn more about class objects in the next section. The original local scope (the one in effect just before the class definition was entered) is reinstated, and the class object is bound here to the class name given in the class definition header (<code>ClassName</code> in the example).</p>
+</blockquote>
+<p>类定义必须在调用之前。当类定义结束，一个<code>Class Object</code>就会被创建（注意这和实例全然不相同）。在返回创建类的上下文的时候，会把这个<code>class object</code>绑定到定义头部的类名称上。</p>
+<h3 id="9-3-2-Class-Objects"><a href="#9-3-2-Class-Objects" class="headerlink" title="9.3.2. Class Objects"></a>9.3.2. Class Objects</h3><blockquote>
+<p>Class objects support two kinds of operations: attribute references and instantiation.</p>
+</blockquote>
+<p><code>Class Object</code>是一种特殊的对象，支持两种操作：属性引用和实例化</p>
+<blockquote>
+<p><em>Attribute references</em> use the standard syntax used for all attribute references in Python: <code>obj.name</code>. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class MyClass:</span><br><span class="line">    &quot;&quot;&quot;A simple example class&quot;&quot;&quot;</span><br><span class="line">    i &#x3D; 12345</span><br><span class="line"></span><br><span class="line">    def f(self):</span><br><span class="line">        return &#39;hello world&#39;</span><br></pre></td></tr></table></figure>
+
+<p>then <code>MyClass.i</code> and <code>MyClass.f</code> are valid attribute references, returning an integer and a function object, respectively. Class attributes can also be assigned to, so you can change the value of <code>MyClass.i</code> by assignment.</p>
+</blockquote>
+<p>对类的属性引用也是使用标准语法。对于如上的一个类而言，其中<code>i</code>和<code>f</code>都是正确的属性，只不过<code>f</code>是一个函数。注意通过类直接引用的函数就是一个<code>function object</code></p>
+<blockquote>
+<p>Class <em>instantiation</em> uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class. For example (assuming the above class):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; MyClass()</span><br></pre></td></tr></table></figure>
+
+<p>creates a new <em>instance</em> of the class and assigns this object to the local variable <code>x</code>.</p>
+<p> Many classes like to create objects with instances customized to a specific initial state.Therefore a class may define a special method named <a href="https://docs.python.org/3/reference/datamodel.html#object.__init__" target="_blank" rel="noopener"><code>__init__()</code></a></p>
+</blockquote>
+<p>类还可以实例化，即返回一个实例。如果要修改类实例化时执行的语句，需要创建或者修改<code>__init__()</code>方法。只要类的方法中有<code>__init__()</code>，实例化的时候就会自动调用，而不需要额外指明。</p>
+<blockquote>
+<p><code>__doc__</code> is also a valid attribute</p>
+</blockquote>
+<p>对于所有的类，紧跟着定义的第一行字符串就是其<code>docstring</code>，可以通过<code>__doc__</code>来访问。</p>
+<h3 id="9-3-3-Instance-Objects"><a href="#9-3-3-Instance-Objects" class="headerlink" title="9.3.3. Instance Objects"></a>9.3.3. Instance Objects</h3><blockquote>
+<p>The only operations understood by instance objects are attribute references. There are two kinds of valid attribute names, data attributes and methods.</p>
+</blockquote>
+<p>类的实例也是一种对象，被称作<code>instance object</code>。对于实例对象而言，只能操作其属性，包括数据属性和方法</p>
+<blockquote>
+<p>if <code>x</code> is the instance of <code>MyClass</code> created above, the following piece of code will print the value <code>16</code>, without leaving a trace:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x.counter = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> x.counter &lt; <span class="number">10</span>:</span><br><span class="line">    x.counter = x.counter * <span class="number">2</span></span><br><span class="line">print(x.counter)</span><br><span class="line"><span class="keyword">del</span> x.counter</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>数据属性就是不是函数的其他属性，或者直觉理解的 <em>数据</em>。对一个实例而言，创建数据属性是不需要提前在类/实例中声明的。</p>
+<blockquote>
+<p>The other kind of instance attribute reference is a <em>method</em>. A method is a function that “belongs to” an object.</p>
+</blockquote>
+<p><em>方法</em> 是一种特殊的函数，是从属于对象的函数。在python中，不是类也可以有方法，例如list对象就可以有自己的方法。但是通常而言，方法指的是实例的函数。</p>
+<blockquote>
+<p> So in our example, <code>x.f</code> is a valid method reference, since <code>MyClass.f</code> is a function, but <code>x.i</code> is not, since <code>MyClass.i</code> is not. But <code>x.f</code> is not the same thing as <code>MyClass.f</code> — it is a <em>method object</em>, not a function object.</p>
+</blockquote>
+<p><em>实例的函数<em>，首先这个对象要是函数；其次必须是</em>实例</em> 的函数而不是 <em>类</em> 的函数。<code>x.f</code>是方法，而<code>MyClass.f</code>是函数。方法和函数最大的区别在于第一个变量，见下。</p>
+<h3 id="9-3-4-Method-Objects"><a href="#9-3-4-Method-Objects" class="headerlink" title="9.3.4. Method Objects"></a>9.3.4. Method Objects</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...	</span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">       <span class="keyword">return</span> <span class="string">'hello world'</span></span><br><span class="line"> ...</span><br><span class="line"> xf = x.f</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">   print(xf())</span><br></pre></td></tr></table></figure>
+
+<p>the special thing about methods is that the instance object is passed as the first argument of the function</p>
+</blockquote>
+<p>可以注意到，对<code>f</code>的定义表明它需要一个参数，但是调用的时候并没有传参，却也不会报错。这就是<em>方法</em> 特殊的地方：方法会将调用方法的实例对象作为函数的第一个参数。</p>
+<blockquote>
+<p>In our example, the call <code>x.f()</code> is exactly equivalent to <code>MyClass.f(x)</code></p>
+</blockquote>
+<p>事实上，既然方法特殊点在于将实例作为参数传入，那么我们就可以通过调用函数，并手动把特定的实例作为参数，就可以达到一样的效果。</p>
+<p>其中<code>self</code>是约定俗成的、用来表示当前实例的变量。当然可以用其他变量名，但是容易造成误解。</p>
+<h3 id="9-3-5-Class-and-Instance-Variables"><a href="#9-3-5-Class-and-Instance-Variables" class="headerlink" title="9.3.5. Class and Instance Variables"></a>9.3.5. Class and Instance Variables</h3><blockquote>
+<p>Generally speaking, instance variables are for data unique to each instance and class variables are for attributes and methods shared by all instances of the class:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>:</span></span><br><span class="line"></span><br><span class="line">    kind = <span class="string">'canine'</span>         <span class="comment"># class variable shared by all instances</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name    <span class="comment"># instance variable unique to each instance</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>通常而言，从属于类的变量是所有实例都共享的，从属于实例的对象是这个实例独享的。例如给<code>Dog</code>一个<code>canine</code>属性是合适的，因为所有的狗都是被驯化的生物。但是每只狗（狗的每个实例）都应该有自己的名字。</p>
+<p>如果把一个可变的对象作为类变量，并错误地使用（例如：修改），就会导致其他实例调用的这个属性也被修改了，这通常都是错误的。</p>
+<h2 id="9-4-Random-Remarks"><a href="#9-4-Random-Remarks" class="headerlink" title="9.4. Random Remarks"></a>9.4. Random Remarks</h2><blockquote>
+<p>Each value is an object, and therefore has a <em>class</em> (also called its <em>type</em>). It is stored as <code>object.__class__</code>.</p>
+</blockquote>
+<p>所有的变量都是对象，因此都会有类名（或者称为类型）。通过访问 <code>__class__</code> 可以获取这个对象的类名。</p>
+<h2 id="9-5-Inheritance"><a href="#9-5-Inheritance" class="headerlink" title="9.5. Inheritance"></a>9.5. Inheritance</h2><blockquote>
+<p>This can be useful, for example, when the base class is defined in another module:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DerivedClassName</span><span class="params">(modname.BaseClassName)</span>:</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>在继承的时候，基类可以直接从<code>module</code>中使用点分法引用。</p>
+<blockquote>
+<p>a method of a base class that calls another method defined in the same base class may end up calling a method of a derived class that overrides it. (For C++ programmers: all methods in Python are effectively <code>virtual</code>.)</p>
+</blockquote>
+<p>基类的任何一个方法都可以被派生类覆盖修改。按照C++的定义，python中的所有类都被<code>virtual</code>关键字修饰[^5]。</p>
+<blockquote>
+<p>An overriding method in a derived class may in fact want to extend rather than simply replace the base class method of the same name. There is a simple way to call the base class method directly: just call <code>BaseClassName.methodname(self, arguments)</code>. This is occasionally useful to clients as well. (Note that this only works if the base class is accessible as <code>BaseClassName</code> in the global scope.)</p>
+</blockquote>
+<p>如果不是要重写方法而是要扩展方法，可以通过调用基类的函数来实现。</p>
+<p><em>注意</em> ：是调用基类的函数而不是方法，因为要把<code>self</code>作为参数显式传进去。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Glossary <a href="https://docs.python.org/3/glossary.html#namespace" target="_blank" rel="noopener">namespace</a><br>[^2]: Python3 Glossary <a href="https://docs.python.org/3/glossary.html#attribute" target="_blank" rel="noopener">attribute</a><br>[^3]: 菜鸟教程：<a href="https://www.runoob.com/python3/python3-namespace-scope.html" target="_blank" rel="noopener">Python3 命名空间和作用域</a><br>[^4]: CSDN: <a href="https://blog.csdn.net/weixin_34303897/article/details/89324025" target="_blank" rel="noopener">Python Enclosing作用域</a><br>[^5]: CSDN: <a href="https://www.cnblogs.com/weiyouqing/p/7544988.html" target="_blank" rel="noopener">C++中virtual</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Introduction-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/" class="post-title-link" itemprop="url">Introduction-4：模块介绍</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:22:27 / Modified: 21:34:50" itemprop="dateCreated datePublished" datetime="2020-03-13T21:22:27+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="6-Modules"><a href="#6-Modules" class="headerlink" title="6. Modules"></a>6. Modules</h1><h2 id="6-1-More-on-Modules"><a href="#6-1-More-on-Modules" class="headerlink" title="6.1. More on Modules"></a>6.1. More on Modules</h2><blockquote>
+<p>Note:</p>
+<p>For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use <a href="https://docs.python.org/3/library/importlib.html#importlib.reload" target="_blank" rel="noopener"><code>importlib.reload()</code></a>, e.g. <code>import importlib;importlib.reload(modulename)</code>.</p>
+</blockquote>
+<p>在import之后更改module，修改并不会实时反馈到脚本/交互式窗口中。但是，使用<code>importlib.reload</code>可以重新加载。重新加载不会重新执行<code>init</code>模块的代码，不会立即删除旧模块的对象，如果在代码中重命名过模块，访问这个引用依然会指向旧模块[^1]。</p>
+<h3 id="6-1-2-The-Module-Search-Path"><a href="#6-1-2-The-Module-Search-Path" class="headerlink" title="6.1.2. The Module Search Path"></a>6.1.2. The Module Search Path</h3><blockquote>
+<p>The directory containing the script being run is placed at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is intended. </p>
+</blockquote>
+<p>在进行模块import的时候，会先搜索<code>script</code>所在的目录，再搜索标准库。因此，如果<code>script</code>目录下有一个和想要导入的模块相同的文件（如：<code>re.py</code>），在<code>import re</code> 的时候并不会导入预期的库，而是导入自己的<code>re.py</code>。除非刻意为之，通常这会导致错误。因此，<strong>不要</strong>以易混淆的名称为自己的文件命名。</p>
+<h2 id="6-3-The-dir-Function"><a href="#6-3-The-dir-Function" class="headerlink" title="6.3. The dir() Function"></a>6.3. The <a href="https://docs.python.org/3/library/functions.html#dir" target="_blank" rel="noopener"><code>dir()</code></a> Function</h2><blockquote>
+<p>The built-in function <code>dir()</code> is used to find out which names a module defines. It returns a sorted list of strings.</p>
+<p>Without arguments, <code>dir()</code> lists the names you have defined currently.</p>
+<p>Note that it lists all types of names: variables, modules, functions, etc.</p>
+<p><code>dir()</code> does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module <a href="https://docs.python.org/3/library/builtins.html#module-builtins" target="_blank" rel="noopener"><code>builtins</code></a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> builtins</span><br><span class="line">dir(builtins) </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>可以通过<code>dir()</code>函数和<code>builtins</code>模块来获取命名空间的所有变量。</p>
+<h2 id="6-4"><a href="#6-4" class="headerlink" title="6.4"></a>6.4</h2><h3 id="6-4-1-Importing-From-a-Package"><a href="#6-4-1-Importing-From-a-Package" class="headerlink" title="6.4.1. Importing * From a Package"></a>6.4.1. Importing * From a Package</h3><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__all__ &#x3D; [&quot;echo&quot;, &quot;surround&quot;, &quot;reverse&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>This would mean that <code>from sound.effects import *</code> would import the three named submodules of the <code>sound</code> package.</p>
+<p>If <code>__all__</code> is not defined, the statement <code>from sound.effects import *</code> does <em>not</em> import all submodules from the package <code>sound.effects</code> into the current namespace; it only ensures that the package <code>sound.effects</code> has been imported (possibly running any initialization code in <code>__init__.py</code>) and then imports whatever names are defined in the package. This includes any names defined (and submodules explicitly loaded) by <code>__init__.py</code>.</p>
+</blockquote>
+<p><code>__init__.py</code>决定了 <code>import</code> 时的动作。定义<code>__all__</code> 可以帮助定义在<code>from m import *</code> 的时候要加载的 <strong>子模块</strong> 。如果没有定义 <code>__all__</code>， 在被<code>import</code>的模块中直接定义的变量<strong>依然会被</strong>加载，有区别的在于只有<code>__init__.py</code>中明确指定的子模块会被加载。</p>
+<p>无论如何，<code>from module import specific_submodule</code> 都是正确且被推荐的做法，避免因为命名冲突导致变量/函数被覆盖。</p>
+<h3 id="6-4-2-Intra-package-References"><a href="#6-4-2-Intra-package-References" class="headerlink" title="6.4.2. Intra-package References"></a>6.4.2. Intra-package References</h3><blockquote>
+<p>Note that relative imports are based on the name of the current module. Since the name of the main module is always <code>&quot;__main__&quot;</code>, modules intended for use as the main module of a Python application must always use absolute imports.</p>
+</blockquote>
+<p>从 Python 2.7 开始默认绝对导入。 python3.x 中的包内的模块导入原则编程了：如果要相对导入，那么一定是显式声明[^2]。同时文档又指出<code>__main__</code>自己就是父文件夹，所以在入口文件中使用相对引用会导致找不到相对路径。</p>
+<blockquote>
+<p>也就是说使用相对导入的文件不应该是要运行执行的文件，而应该只是外层调用的模块。但是如果你非要在packges里面做测试的话，那就不要使用相对导入[^2]。</p>
+</blockquote>
+<p>用如下文件结构进行测试</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">pkghome/                          Top-level package</span><br><span class="line">      __init__.py               	Initialize the sound package</span><br><span class="line">      auv/                  Subpackage <span class="keyword">for</span> auv</span><br><span class="line">              __init__.py</span><br><span class="line">              auv_env.py</span><br><span class="line">              anv_agent.py</span><br><span class="line">              ...</span><br><span class="line">      asv/                  Subpackage <span class="keyword">for</span> asv</span><br><span class="line">              __init__.py</span><br><span class="line">              asv.py</span><br><span class="line">              ...</span><br><span class="line">out_test.py</span><br></pre></td></tr></table></figure>
+
+<p>对此的测试结果如下：</p>
+<ol>
+<li><p>在<code>out_test.py</code>中绝对引用<code>import pkghome</code> </p>
+<p><strong>成功</strong>， 是标准的同级引用包方式</p>
+</li>
+<li><p>在<code>out_test.py</code>中相对引用<code>from . import pkghome</code></p>
+<p><strong>报错</strong>， 没有父文件夹无法相对引用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ImportError: attempted relative <span class="keyword">import</span> <span class="keyword">with</span> no known parent package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>pkghome/__init__.py</code>中绝对引用<code>import  pkghome.auv</code>，运行<code>out_test.py</code></p>
+<p><em>注：实际运行的是<code>out_test</code>文件，但其对pkghome的引用会执行<code>__init__</code>文件</em></p>
+<p><strong>报错</strong>，从<code>out_test</code>文件往下看能看到<code>pkghome.auv</code></p>
+</li>
+<li><p>在<code>pkghome/__init__.py</code>中绝对引用<code>import  pkghome.auv</code>，运行<code>__init__.py</code></p>
+<p><strong>失败</strong>，对于<code>__init__.py</code>文件的目录层级而言，没有<code>pkghome</code>这个包，只有<code>auv</code>和<code>asv</code>包。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'pkghome'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>auv/__init__.py</code>中绝对引用<code>import pkghome.asv</code>， 运行<code>out_test.py</code></p>
+<p><em>注：<code>out_test</code>文件对auv的引用会执行<code>pkghome/__init__</code>文件，而这个文件中对<code>auv</code>的引用会执行<code>auv/__init__</code>文件</em></p>
+<p><strong>成功</strong>， 标准的绝对引用</p>
+</li>
+<li><p>在<code>auv/__init__.py</code>中绝对引用<code>import pkghome.asv</code>， 运行<code>auv/__init__.py</code></p>
+<p><strong>报错</strong>， 同4.</p>
+</li>
+<li><p>在<code>auv/__init__.py</code>中相对引用<code>from .. import asv</code>， 运行<code>out_test.py</code></p>
+<p><strong>成功</strong>， 标准的相对引用</p>
+</li>
+<li><p>在<code>auv/__init__.py</code>中相对引用<code>from .. import asv</code>， 运行<code>pkghome/__init__.py</code></p>
+<p><em>注：这样运行会报错，见4. 为此，将<code>pkghome/__init__.py</code>内容改为<code>import auv</code> 见5.</em></p>
+<p><strong>报错</strong>，查找目录到<code>pkghome/__init__.py</code>同级为止，无法到达<code>pkghome</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ValueError: attempted relative <span class="keyword">import</span> beyond top-level package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>auv/__init__.py</code>中相对引用<code>from .. import asv</code>， 运行<code>auv/__init__.py</code></p>
+<p><strong>报错</strong>， 同2. 当执行脚本中出现相对引用，会找不到路径（因为路径根据当前文件确定，见文档）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ImportError: attempted relative <span class="keyword">import</span> <span class="keyword">with</span> no known parent package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>pkghome/__init__.py</code>中隐式相对引用<code>import asv</code>， 运行<code>out_test.py</code></p>
+<p><strong>报错</strong>，隐式相对引用现在已经被禁止，这样写会默认查找顶级的<code>asv</code>包，而不是同级。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'auv'</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<p>对此可以得出一组结论：</p>
+<ul>
+<li>不管是绝对引用还是相对引用，入口脚本位置都决定了能不能解析这个包。这实际上是由查找路径决定的。</li>
+<li>隐式相对引用已经被废止，即使是同级模块也应该使用<code>from . import</code> 或者<code>from .module import</code></li>
+<li>进行了相对引用的文件不能被直接执行，否则会无法找到相对路径。</li>
+</ul>
+<p>更多的补充测试可以参考CSDN 博客[^2]</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Library <a href="https://docs.python.org/3/library/importlib.html#importlib.reload" target="_blank" rel="noopener">importlib.reload</a><br>[^2]: CSDN：<a href="https://blog.csdn.net/pipisorry/article/details/43313197" target="_blank" rel="noopener">python模块导入及属性：import</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Introduction-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">Introduction-3：数据结构</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:22:03 / Modified: 21:34:40" itemprop="dateCreated datePublished" datetime="2020-03-13T21:22:03+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="5-Data-Structures"><a href="#5-Data-Structures" class="headerlink" title="5. Data Structures"></a>5. Data Structures</h1><h2 id="5-1-More-on-Lists"><a href="#5-1-More-on-Lists" class="headerlink" title="5.1. More on Lists"></a>5.1. More on Lists</h2><blockquote>
+<p><code>list.``copy</code>()</p>
+<p>Return a shallow copy of the list. Equivalent to <code>a[:]</code>.</p>
+</blockquote>
+<p>在需要使用列表浅拷贝的时候，可以使用copy()方法，可读性比[:]略好。</p>
+<h3 id="5-1-2-Using-Lists-as-Queues"><a href="#5-1-2-Using-Lists-as-Queues" class="headerlink" title="5.1.2. Using Lists as Queues"></a>5.1.2. Using Lists as Queues</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue = deque([<span class="string">"Eric"</span>, <span class="string">"John"</span>, <span class="string">"Michael"</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.append(<span class="string">"Terry"</span>)           <span class="comment"># Terry arrives</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.append(<span class="string">"Graham"</span>)          <span class="comment"># Graham arrives</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.popleft()                 <span class="comment"># The first to arrive now leaves</span></span><br><span class="line"><span class="string">'Eric'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.popleft()                 <span class="comment"># The second to arrive now leaves</span></span><br><span class="line"><span class="string">'John'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue                           <span class="comment"># Remaining queue in order of arrival</span></span><br><span class="line">deque([<span class="string">'Michael'</span>, <span class="string">'Terry'</span>, <span class="string">'Graham'</span>])</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>使用list也可以实现queue，但是list在头部插入元素很麻烦。相比之下，使用双端队列deque可以简单一些，但是空间占用会增加。<code>deque</code>是<code>double-ends queue</code>的缩写[^1]。</p>
+<h3 id="5-1-4-Nested-List-Comprehensions"><a href="#5-1-4-Nested-List-Comprehensions" class="headerlink" title="5.1.4. Nested List Comprehensions"></a>5.1.4. Nested List Comprehensions</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>matrix = [</span><br><span class="line"><span class="meta">... </span>    [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line"><span class="meta">... </span>    [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>],</span><br><span class="line"><span class="meta">... </span>    [<span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>],</span><br><span class="line"><span class="meta">... </span>]</span><br></pre></td></tr></table></figure>
+
+<p>In the real world, you should prefer built-in functions to complex flow statements. The <a href="https://docs.python.org/3/library/functions.html#zip" target="_blank" rel="noopener"><code>zip()</code></a>function would do a great job for this use case:</p>
+<p>&gt;&gt;&gt;</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(zip(*matrix))</span><br><span class="line">[(<span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>), (<span class="number">2</span>, <span class="number">6</span>, <span class="number">10</span>), (<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>), (<span class="number">4</span>, <span class="number">8</span>, <span class="number">12</span>)]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>通过zip(*)的方式可以很简单地进行类似矩阵转置的操作。注意zip的结果是一个generator，需要显式转换为list。</p>
+<h2 id="5-4-Sets"><a href="#5-4-Sets" class="headerlink" title="5.4. Sets"></a>5.4. Sets</h2><blockquote>
+<p>Note: to create an empty set you have to use <code>set()</code>, not <code>{}</code></p>
+</blockquote>
+<p>set和dict都用{}包括，在创建新的set的时候必须使用<code>set()</code>以与dict区分。</p>
+<h2 id="5-5-Dictionaries"><a href="#5-5-Dictionaries" class="headerlink" title="5.5. Dictionaries"></a>5.5. Dictionaries</h2><blockquote>
+<p>When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict(sape=<span class="number">4139</span>, guido=<span class="number">4127</span>, jack=<span class="number">4098</span>)</span><br><span class="line">&#123;<span class="string">'sape'</span>: <span class="number">4139</span>, <span class="string">'guido'</span>: <span class="number">4127</span>, <span class="string">'jack'</span>: <span class="number">4098</span>&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>创建字典的时候，如果是用简单的字符串做键，可以直接以关键字指定的方式创建。</p>
+<h2 id="5-7-More-on-Conditions"><a href="#5-7-More-on-Conditions" class="headerlink" title="5.7. More on Conditions"></a>5.7. More on Conditions</h2><blockquote>
+<p>The Boolean operators <code>and</code> and <code>or</code> are so-called <em>short-circuit</em> operators: their arguments are evaluated from left to right, and evaluation stops as soon as the outcome is determined. For example, if <code>A</code> and <code>C</code> are true but <code>B</code> is false, <code>A and B and C</code> does not evaluate the expression <code>C</code>.</p>
+</blockquote>
+<p>在进行<code>and</code> 与 <code>or</code> 的判断的时候，只要结果出现，后续的表达式将不被运算。这通常被称为“短路运算符”。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Library <a href="https://docs.python.org/3/library/collections.html#collections.deque" target="_blank" rel="noopener">collections.deque</a> </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Introduction-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">Introduction-2：更多流控制工具</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:19:02 / Modified: 21:34:29" itemprop="dateCreated datePublished" datetime="2020-03-13T21:19:02+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="4-More-Control-Flow-Tools"><a href="#4-More-Control-Flow-Tools" class="headerlink" title="4. More Control Flow Tools"></a>4. More Control Flow Tools</h1><h2 id="4-2-for-Statements"><a href="#4-2-for-Statements" class="headerlink" title="4.2. for Statements"></a>4.2. <code>for</code> Statements</h2><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Strategy:  Iterate over a copy</span></span><br><span class="line"><span class="keyword">for</span> user, status <span class="keyword">in</span> users.copy().items():</span><br><span class="line">    <span class="keyword">if</span> status == <span class="string">'inactive'</span>:</span><br><span class="line">        <span class="keyword">del</span> users[user]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>遍历dict的时候是在遍历其keys，如果要获取key-value，最好是使用 <code>.items()</code>。items() 方法把字典中每对 key 和 value 组成一个元组，并把这些元组放在列表中返回。</p>
+<p>需要注意的是，尽管可以 for .. in dict，dict并不是序列(sequence)，但是他是可迭代对象(iterable)[^1]。</p>
+<p>修改一个正在遍历中的字典很容易出错，可以通过copy方法产生一个拷贝，当然也可以对string或者list使用切片来做这件事。</p>
+<h2 id="4-4-break-and-continue-Statements-and-else-Clauses-on-Loops"><a href="#4-4-break-and-continue-Statements-and-else-Clauses-on-Loops" class="headerlink" title="4.4. break and continue Statements, and else Clauses on Loops"></a>4.4. <code>break</code> and <code>continue</code> Statements, and <code>else</code> Clauses on Loops</h2><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">10</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>, n):</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">if</span> n % x == <span class="number">0</span>:</span><br><span class="line"><span class="meta">... </span>            print(n, <span class="string">'equals'</span>, x, <span class="string">'*'</span>, n//x)</span><br><span class="line"><span class="meta">... </span>            <span class="keyword">break</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">else</span>:</span><br><span class="line"><span class="meta">... </span>        <span class="comment"># loop fell through without finding a factor</span></span><br><span class="line"><span class="meta">... </span>        print(n, <span class="string">'is a prime number'</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>尽管这么做通常不被推荐，python提供for-else的控制语句，在for结束之后执行else语句。如果使用<code>break</code>关键字跳出循环，则else <strong>不会</strong> 被执行。</p>
+<h2 id="4-6-Defining-Functions"><a href="#4-6-Defining-Functions" class="headerlink" title="4.6. Defining Functions"></a>4.6. Defining Functions</h2><blockquote>
+<p> thus, arguments are passed using <em>call by value</em> (where the <em>value</em> is always an object </p>
+<p><em>reference</em>, not the value of the object).</p>
+<p>Actually, <em>call by object reference</em> would be a better description, since if a mutable object is passed, the caller will see any changes the callee makes to it (items inserted into a list).</p>
+</blockquote>
+<p>函数的参数始终是其引用（而不是这个值）。尤其是当参数是list等可变对象的时候，函数内对参数的改动可以在函数外被<strong>立即</strong>看到。</p>
+<h2 id="4-7"><a href="#4-7" class="headerlink" title="4.7"></a>4.7</h2><h3 id="4-7-3-Special-parameters"><a href="#4-7-3-Special-parameters" class="headerlink" title="4.7.3. Special parameters"></a>4.7.3. Special parameters</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2)</span>:</span></span><br><span class="line">      -----------    ----------     ----------</span><br><span class="line">        |             |                  |</span><br><span class="line">        |        Positional <span class="keyword">or</span> keyword   |</span><br><span class="line">        |                                - Keyword only</span><br><span class="line">         -- Positional only</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>python3.8之后提供了<code>/</code>和<code>*</code> 来标志参数的特殊。在<code>/</code>之前的只能通过位置（而不能通过关键字）传参，在<code>*</code>之后的智能通过关键词传参。<code>/</code>和<code>*</code>都可以单独出现，并分别可以在参数的第一个与最后一个。</p>
+<p>positional-only参数有这样的用处：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(name, /, **kwds)</span>:</span></span><br></pre></td></tr></table></figure>
+
+<p>对于这样的函数，如果不指定第一个参数只能通过位置传递，则<code>**kwds</code>中不能接受以’name’为key的参数。</p>
+<p>还有如下的指导性原则：</p>
+<blockquote>
+<p>As guidance:</p>
+<ul>
+<li>Use positional-only if you want the name of the parameters to not be available to the user. This is useful when parameter names have no real meaning, if you want to enforce the order of the arguments when the function is called or if you need to take some positional parameters and arbitrary keywords.</li>
+<li>Use keyword-only when names have meaning and the function definition is more understandable by being explicit with names or you want to prevent users relying on the position of the argument being passed.</li>
+<li>For an API, use positional-only to prevent breaking API changes if the parameter’s name is modified in the future.</li>
+</ul>
+</blockquote>
+<h3 id="4-7-5-Unpacking-Argument-Lists"><a href="#4-7-5-Unpacking-Argument-Lists" class="headerlink" title="4.7.5. Unpacking Argument Lists"></a>4.7.5. Unpacking Argument Lists</h3><blockquote>
+<p>If they are not available separately, write the function call with the <code>*</code>-operator to unpack the arguments out of a list or tuple:</p>
+<p>…</p>
+<p>In the same fashion, dictionaries can deliver keyword arguments with the <code>**</code>-operator:</p>
+</blockquote>
+<p>使用<code>*</code>可以解包tuple和list类型，解包dict则需要使用<code>**</code>，解包效果为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">parrot</span><span class="params">(voltage, state=<span class="string">'a stiff'</span>, action=<span class="string">'voom'</span>)</span>:</span></span><br><span class="line"><span class="meta">... </span>    print(<span class="string">"-- This parrot wouldn't"</span>, action, end=<span class="string">' '</span>)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">"if you put"</span>, voltage, <span class="string">"volts through it."</span>, end=<span class="string">' '</span>)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">"E's"</span>, state, <span class="string">"!"</span>)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">"voltage"</span>: <span class="string">"four million"</span>, <span class="string">"state"</span>: <span class="string">"bleedin' demised"</span>, <span class="string">"action"</span>: <span class="string">"VOOM"</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>parrot(**d)</span><br><span class="line">-- This parrot wouldn<span class="string">'t VOOM if you put four million volts through it. E'</span>s bleedin<span class="string">' demised !</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到解包之后：会将dict拆解为 <code>key1=value1, key2=value2, ...</code>的形式</p>
+<h3 id="4-7-7-Documentation-Strings"><a href="#4-7-7-Documentation-Strings" class="headerlink" title="4.7.7. Documentation Strings"></a>4.7.7. Documentation Strings</h3><blockquote>
+<p>The first line should always be a short, concise summary of the object’s purpose. For brevity, it should not explicitly state the object’s name or type, since these are available by other means (except if the name happens to be a verb describing a function’s operation). This line should begin with a capital letter and end with a period.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_function</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""Do nothing, but document it.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    No, really, it doesn't do anything.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>docstring的第一行应该是他的简要描述，并应该首字母大写，以<code>.</code>结尾。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Glossary <a href="https://docs.python.org/3/glossary.html#term-sequence" target="_blank" rel="noopener">term-sequence</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-1%EF%BC%9Apython%E7%9A%84%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BB%8B%E7%BB%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Introduction-1%EF%BC%9Apython%E7%9A%84%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BB%8B%E7%BB%8D/" class="post-title-link" itemprop="url">Introduction-1：python的非正式介绍</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:18:29 / Modified: 21:34:20" itemprop="dateCreated datePublished" datetime="2020-03-13T21:18:29+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="3-An-Informal-Introduction-to-Python"><a href="#3-An-Informal-Introduction-to-Python" class="headerlink" title="3. An Informal Introduction to Python"></a>3. An Informal Introduction to Python</h1><h3 id="3-1-2-Strings"><a href="#3-1-2-Strings" class="headerlink" title="3.1.2 Strings"></a>3.1.2 Strings</h3><blockquote>
+<p>One way to remember how slices work is to think of the indices as pointing <em>between</em> characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of <em>n</em> characters has index <em>n</em>, for example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> +---+---+---+---+---+---+</span><br><span class="line"> | P | y | t | h | o | n |</span><br><span class="line"> +---+---+---+---+---+---+</span><br><span class="line"> 0   1   2   3   4   5   6</span><br><span class="line">-6  -5  -4  -3  -2  -1</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>切片是非常常用的语法，可以字符串中截取出一段。在指定slices范围的时候，实际上是选择位于字母<strong>之间</strong>的分隔符。这样就很容易理解 s[0:3]的长度是3，s[3:5]是第3、第4个字母(0-index)。</p>
+<h3 id="3-1-3-Lists"><a href="#3-1-3-Lists" class="headerlink" title="3.1.3 Lists"></a>3.1.3 Lists</h3><blockquote>
+<p>Lists might contain items of different types, but usually the items all have the same type.</p>
+</blockquote>
+<p>列表可以包含不同类型的元素，尽管通常是同一类型的。这很好理解，因为python的底层数据结构实现上，所有的对象都是继承了PyObject对象，而list中存放的指针是PyObject类型的指针<a href="知乎专栏：[源码读python](https://zhuanlan.zhihu.com/p/34410799)">^1</a></p>
+<blockquote>
+<p>All slice operations return a new list containing the requested elements. This means that the following slice returns a <a href="https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy" target="_blank" rel="noopener">shallow copy</a> of the list.</p>
+</blockquote>
+<p>列表也有切片，切片的索引规则和str切片一致。列表切片总是返回一个列表，且是一个浅拷贝。对于列表这种可变对象而言，也可以通过切片的方式指定列表的一部分，并对其修改，而str不行。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Python%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%89%8D%E8%A8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/Python%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%89%8D%E8%A8%80/" class="post-title-link" itemprop="url">Python 官方文档学习笔记：前言</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:17:47 / Modified: 21:33:47" itemprop="dateCreated datePublished" datetime="2020-03-13T21:17:47+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在尝试阅读Python官方文档之前，我的python学习一直是碎片化的、用到什么学什么的。在这个过程中，我认为这些资料和经历对我帮助很大：</p>
+<ul>
+<li><p>《Python爬虫开发与项目实战》</p>
+<p>这是一本从byrbt上下载的爬虫教程，很详细系统地介绍了python爬虫用到的相关知识。通过这本书，配合一门python选修课，我编写了一个多线程爬取链家房源的代码，配合正则表达式和csv文件进行存储。</p>
+</li>
+<li><p>简明python教程</p>
+<p>因为之前有过一定的编程经验，因此在接触python的时候，简单的数据结构和语法都是一扫即过。出于系统整理思路的需要，我去了解了 LearnPythonTheHardWay 和 简明python教程 ，并最终选择 <a href="https://bop.mol.uno/" target="_blank" rel="noopener">简明python教程</a> 。</p>
+<p>在有一定的python编程经验之后，简明python教程的阅读时间大约在2-3小时，是一个相对清晰又简单的整理。</p>
+</li>
+<li><p>高考志愿顾问项目</p>
+<p>志愿顾问项目是一个相对完整的项目，从前期的爬取数据，到作为demo的Flask搭建小程序后端，再到后续数据处理中数据库的使用和脚本化使用python，都大大加深了我对python的理解。在参考他人代码的同时也学习到了良好的代码风格和注释风格。</p>
+</li>
+<li><p>强化学习开发</p>
+<p>在进行强化学习应用到流量工程的项目开发中，我接触了python的另一大领域：机器学习。</p>
+<p>通过学习和使用tensorflow、pytorch，一方面是增加了我对机器学习的了解，一方面则是对代码风格和抽象与重构进行了更多的思考。不断整理和抽象代码不仅帮助我完成了第一个PyPI上发布的包，也给了我代码接耦和拓展化的想象。</p>
+</li>
+</ul>
+<p>在经过这么长时间的应用之后，机缘巧合之下我了解了 <a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">python3-cookbook</a> ，一本优秀的python进阶读物。在简要阅读了前几节之后，我猛然惊醒自己居然对python依然没有一个系统的了解，对python的内置库也完全没有概念。加上偶有接触python官方文档，我决定一边学习cookbook，一边去阅读python的官方文档。</p>
+<p>或许可以这么说：这是一个激动人心的时刻，我终于有了足够的知识和意识，开始阅读官方文档了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/13/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-13 20:47:35" itemprop="dateCreated datePublished" datetime="2020-03-13T20:47:35+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -106,95 +1059,173 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://lampv.github.io/2020/03/13/hello-world/" data-id="ck7q75glj0000zr67efpx16f2" class="article-share-link">Share</a>
-      
-      
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jiawei Wu</p>
+  <div class="site-description" itemprop="description">This is my blog on Github</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">©2020 by Jiawei Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-</article>
-
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+<script src="/js/schemes/muse.js"></script>
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
-    </div>
-  </div>
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/03/13/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 Jiawei Wu<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
   
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
 </body>
 </html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lampv.github.io","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="9. Classes9.2. Python Scopes and Namespacesnamespace A namespace is a mapping from names to objects.  Namespace 是一个从标志符到对象的映射，通常由字典实现[^1]。 attribute By the way, I use the word attribute for any name f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction-5：类与类相关">
+<meta property="og:url" content="http://lampv.github.io/2020/03/13/Introduction-5%EF%BC%9A%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%9B%B8%E5%85%B3/index.html">
+<meta property="og:site_name" content="Kiwi Book">
+<meta property="og:description" content="9. Classes9.2. Python Scopes and Namespacesnamespace A namespace is a mapping from names to objects.  Namespace 是一个从标志符到对象的映射，通常由字典实现[^1]。 attribute By the way, I use the word attribute for any name f">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-13T13:22:47.831Z">
+<meta property="article:modified_time" content="2020-03-13T13:40:30.749Z">
+<meta property="article:author" content="Jiawei Wu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://lampv.github.io/2020/03/13/Introduction-5%EF%BC%9A%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%9B%B8%E5%85%B3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Introduction-5：类与类相关 | Kiwi Book</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kiwi Book</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">南风知我意</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>Schedule</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-5%EF%BC%9A%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%9B%B8%E5%85%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Introduction-5：类与类相关
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:22:47 / Modified: 21:40:30" itemprop="dateCreated datePublished" datetime="2020-03-13T21:22:47+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="9-Classes"><a href="#9-Classes" class="headerlink" title="9. Classes"></a>9. Classes</h1><h2 id="9-2-Python-Scopes-and-Namespaces"><a href="#9-2-Python-Scopes-and-Namespaces" class="headerlink" title="9.2. Python Scopes and Namespaces"></a>9.2. Python Scopes and Namespaces</h2><h4 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h4><blockquote>
+<p>A <em>namespace</em> is a mapping from names to objects.</p>
+</blockquote>
+<p>Namespace 是一个从标志符到对象的映射，通常由字典实现[^1]。</p>
+<h4 id="attribute"><a href="#attribute" class="headerlink" title="attribute"></a>attribute</h4><blockquote>
+<p>By the way, I use the word <em>attribute</em> for any name following a dot — for example, in the expression <code>z.real</code>, <code>real</code> is an attribute of the object <code>z</code>. </p>
+</blockquote>
+<p>与对象关联的、使用点分法表示的值被称为<code>attribute</code>，常见的表示法为<code>obj.attr</code>， 其中<code>obj</code>是一个对象，而<code>attr</code>是其attribute[^2]。</p>
+<p>对于一个<code>module</code>而言，其下的<code>function</code>的funcname显然也是他的<code>attribute</code>。</p>
+<h4 id="namespace-lifetimes"><a href="#namespace-lifetimes" class="headerlink" title="namespace lifetimes"></a>namespace lifetimes</h4><blockquote>
+<p>Namespaces are created at different moments and have different lifetimes. The namespace containing the built-in names is created when the Python interpreter starts up, and is never deleted. The global namespace for a module is created when the module definition is read in; normally, module namespaces also last until the interpreter quits. The statements executed by the top-level invocation of the interpreter, either read from a script file or interactively, are considered part of a module called <a href="https://docs.python.org/3/library/__main__.html#module-__main__" target="_blank" rel="noopener"><code>__main__</code></a>, so they have their own global namespace. (The built-in names actually also live in a module; this is called <a href="https://docs.python.org/3/library/builtins.html#module-builtins" target="_blank" rel="noopener"><code>builtins</code></a>.)</p>
+<p>The local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function. (Actually, forgetting would be a better way to describe what actually happens.) Of course, recursive invocations each have their own local namespace.</p>
+</blockquote>
+<p><code>built-in</code>的Namespace在最早被创建且整个过程不会被删除；<code>global</code>的Namespace在模块被加载的时候创建，且通常不会被删除；<code>__main__</code>（当前脚本）里面的变量实际上也在一个<code>global</code> Namespace中。<code>local</code>的Napespace是在函数中被创建，在离开函数的时候删除。</p>
+<h4 id="scope"><a href="#scope" class="headerlink" title="scope"></a>scope</h4><blockquote>
+<p>A <em>scope</em> is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.</p>
+<p> At any time during execution, there are at least three nested scopes whose namespaces are directly accessible:</p>
+<ul>
+<li>the innermost scope, which is searched first, contains the local names</li>
+<li>the scopes of any enclosing functions, which are searched starting with the nearest enclosing scope, contains non-local, but also non-global names</li>
+<li>the next-to-last scope contains the current module’s global names</li>
+<li>the outermost scope (searched last) is the namespace containing built-in names</li>
+</ul>
+</blockquote>
+<p>Scope通常是与Namespace对应的概念。<code>namespace</code>是一组变量-对象组成的字典。例如，在一个函数内定义的变量与其名称对应关系构成一个<code>local namespace</code>。而<code>scope</code>则表示和一个<code>namespace</code>对应的 <em>文本区域</em>：例如，在一个函数定义范围内的 <code>文本</code>所定义的变量都属于这个函数的<code>local namespace</code>，因此这个文本范围就是这个函数的 <code>local scope</code>  。</p>
+<p>对于一个变量名，在查找其对应对象的时候需要查阅<code>namespace</code>。不管使用这个变量名位于哪个文本区域(即<code>scope</code>)，都会按顺序查找<code>scope</code> <strong>中的names</strong>。其顺序是:</p>
+<p> <strong>L</strong>ocal - <strong>E</strong>nclosing functions - <strong>G</strong>lobal - <strong>B</strong>uilt-in。[^3]</p>
+<h4 id="global-amp-nonlocal"><a href="#global-amp-nonlocal" class="headerlink" title="global &amp; nonlocal"></a>global &amp; nonlocal</h4><blockquote>
+<p>The <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> statement can be used to indicate that particular variables live in the global scope and should be rebound there; the <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> statement indicates that particular variables live in an enclosing scope and should be rebound there.</p>
+<p>A special quirk of Python is that – if no <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> or <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> statement is in effect – assignments to names always go into the innermost scope.</p>
+<p>To rebind variables found outside of the innermost scope, the <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> statement can be used; if not declared nonlocal, those variables are read-only.</p>
+</blockquote>
+<p>如果没有使用<code>global</code>或者<code>nonlocal</code>，但是在<code>local scope</code>中引用了<code>module-level</code>或者更高级的<code>local</code>（例如：类的方法<code>loacl</code>试图引用类的<code>local</code>）的变量，那么python总是将这个变量理解为最内层的<code>scope</code>。即使能查找到外层同名变量，也只是获取外层变量的值，并不能修改外层变量。</p>
+<p><code>global</code>关键字是用来告诉解释器，将接下来声明的变量当作<code>global</code>级别的变量。如果<code>global namespace</code>中原来没有这个变量，会创建。</p>
+<p><code>nonlocal</code>关键字用来告诉解释器，接下来的变量应该引用最近的<code>enclosing</code>范围的（但不包括<code>global</code>）变量。</p>
+<h3 id="9-2-1-Scopes-and-Namespaces-Example"><a href="#9-2-1-Scopes-and-Namespaces-Example" class="headerlink" title="9.2.1. Scopes and Namespaces Example"></a>9.2.1. Scopes and Namespaces Example</h3><blockquote>
+<p>This is an example demonstrating how to reference the different scopes and namespaces, and how <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> and <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> affect variable binding:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def scope_test():</span><br><span class="line">    def do_local():</span><br><span class="line">        spam &#x3D; &quot;local spam&quot;</span><br><span class="line"></span><br><span class="line">    def do_nonlocal():</span><br><span class="line">        nonlocal spam</span><br><span class="line">        spam &#x3D; &quot;nonlocal spam&quot;</span><br><span class="line"></span><br><span class="line">    def do_global():</span><br><span class="line">        global spam</span><br><span class="line">        spam &#x3D; &quot;global spam&quot;</span><br><span class="line"></span><br><span class="line">    spam &#x3D; &quot;test spam&quot;</span><br><span class="line">    do_local()</span><br><span class="line">    print(&quot;After local assignment:&quot;, spam)</span><br><span class="line">    do_nonlocal()</span><br><span class="line">    print(&quot;After nonlocal assignment:&quot;, spam)</span><br><span class="line">    do_global()</span><br><span class="line">    print(&quot;After global assignment:&quot;, spam)</span><br><span class="line"></span><br><span class="line">scope_test()</span><br><span class="line">print(&quot;In global scope:&quot;, spam)</span><br></pre></td></tr></table></figure>
+
+<p>The output of the example code is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">After local assignment: test spam</span><br><span class="line">After nonlocal assignment: nonlocal spam</span><br><span class="line">After global assignment: nonlocal spam</span><br><span class="line">In global scope: global spam</span><br></pre></td></tr></table></figure>
+
+<p>Note how the <em>local</em> assignment (which is default) didn’t change <em>scope_test*’s binding of *spam</em>. The <a href="https://docs.python.org/3/reference/simple_stmts.html#nonlocal" target="_blank" rel="noopener"><code>nonlocal</code></a> assignment changed <em>scope_test*’s binding of *spam</em>, and the <a href="https://docs.python.org/3/reference/simple_stmts.html#global" target="_blank" rel="noopener"><code>global</code></a> assignment changed the module-level binding.</p>
+</blockquote>
+<ul>
+<li><p>不使用任何关键字，则变量默认在<code>local</code>域下操作</p>
+<p>在执行了<code>do_local</code>函数之后，<code>func scope_test</code>这个<code>scope</code> 中的变量并没有发生改变。</p>
+<p>如果在<code>do_local</code>中打印，则会打印<code>local spam</code>，因为最先搜索Local scope</p>
+</li>
+<li><p>使用<code>nonlocal</code>关键字，则会到离得最近的<code>enclosing scope</code>中查找变量</p>
+<blockquote>
+<p>Jaglawz: 也就是说内层函数（在本例中就是wrapper啦）会把外层函数（在本例用就是deco啦）作用域里面的对象放到<strong>closure</strong>属性里，以供自己查找？</p>
+<p>Pylego: 是的，但是不是所有外层函数作用域的对象都会放到内层函数的<strong>closure</strong>属性里，仅限自己用到的，这个<strong>closure</strong>就是enclosing作用域啦！</p>
+<p>Jaglawz: 原来enclosing作用域是这样的，明白了。</p>
+</blockquote>
+<p>考虑到 <em>被自己用到的外层函数作用域</em> 也就是 <em>自己要查找的外层函数的作用域</em>，可以简单理解为外层函数的<code>scope</code>就是所谓的<code>nearest enclosing scope</code> [^4]</p>
+<p>注意到<code>spam</code> 是 <code>enclosing scope</code>中已经定义的变量，<code>nonlocal</code>不能引用未定义的变量</p>
+</li>
+<li><p>使用<code>global</code>关键字</p>
+<p><code>global</code>关键字会越过<code>enclosing scope</code>直接查找<code>global scope</code>，所以执行<code>global_spam</code>之后<code>enclosing scope</code>的<code>spam</code>并没有修改。</p>
+<p><code>global</code>关键字不需要<code>global scope</code>中原本就存在这个变量，如果没有，会创建。所以在<code>scope_test</code>域外执行的代码可以直接引用<code>spam</code>。</p>
+</li>
+</ul>
+<h2 id="9-3-A-First-Look-at-Classes"><a href="#9-3-A-First-Look-at-Classes" class="headerlink" title="9.3. A First Look at Classes"></a>9.3. A First Look at Classes</h2><h3 id="9-3-1-Class-Definition-Syntax"><a href="#9-3-1-Class-Definition-Syntax" class="headerlink" title="9.3.1. Class Definition Syntax"></a>9.3.1. Class Definition Syntax</h3><blockquote>
+<p>Class definitions, like function definitions (<a href="https://docs.python.org/3/reference/compound_stmts.html#def" target="_blank" rel="noopener"><code>def</code></a> statements) must be executed before they have any effect.</p>
+<p>When a class definition is left normally (via the end), a <em>class object</em> is created. This is basically a wrapper around the contents of the namespace created by the class definition; we’ll learn more about class objects in the next section. The original local scope (the one in effect just before the class definition was entered) is reinstated, and the class object is bound here to the class name given in the class definition header (<code>ClassName</code> in the example).</p>
+</blockquote>
+<p>类定义必须在调用之前。当类定义结束，一个<code>Class Object</code>就会被创建（注意这和实例全然不相同）。在返回创建类的上下文的时候，会把这个<code>class object</code>绑定到定义头部的类名称上。</p>
+<h3 id="9-3-2-Class-Objects"><a href="#9-3-2-Class-Objects" class="headerlink" title="9.3.2. Class Objects"></a>9.3.2. Class Objects</h3><blockquote>
+<p>Class objects support two kinds of operations: attribute references and instantiation.</p>
+</blockquote>
+<p><code>Class Object</code>是一种特殊的对象，支持两种操作：属性引用和实例化</p>
+<blockquote>
+<p><em>Attribute references</em> use the standard syntax used for all attribute references in Python: <code>obj.name</code>. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class MyClass:</span><br><span class="line">    &quot;&quot;&quot;A simple example class&quot;&quot;&quot;</span><br><span class="line">    i &#x3D; 12345</span><br><span class="line"></span><br><span class="line">    def f(self):</span><br><span class="line">        return &#39;hello world&#39;</span><br></pre></td></tr></table></figure>
+
+<p>then <code>MyClass.i</code> and <code>MyClass.f</code> are valid attribute references, returning an integer and a function object, respectively. Class attributes can also be assigned to, so you can change the value of <code>MyClass.i</code> by assignment.</p>
+</blockquote>
+<p>对类的属性引用也是使用标准语法。对于如上的一个类而言，其中<code>i</code>和<code>f</code>都是正确的属性，只不过<code>f</code>是一个函数。注意通过类直接引用的函数就是一个<code>function object</code></p>
+<blockquote>
+<p>Class <em>instantiation</em> uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class. For example (assuming the above class):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; MyClass()</span><br></pre></td></tr></table></figure>
+
+<p>creates a new <em>instance</em> of the class and assigns this object to the local variable <code>x</code>.</p>
+<p> Many classes like to create objects with instances customized to a specific initial state.Therefore a class may define a special method named <a href="https://docs.python.org/3/reference/datamodel.html#object.__init__" target="_blank" rel="noopener"><code>__init__()</code></a></p>
+</blockquote>
+<p>类还可以实例化，即返回一个实例。如果要修改类实例化时执行的语句，需要创建或者修改<code>__init__()</code>方法。只要类的方法中有<code>__init__()</code>，实例化的时候就会自动调用，而不需要额外指明。</p>
+<blockquote>
+<p><code>__doc__</code> is also a valid attribute</p>
+</blockquote>
+<p>对于所有的类，紧跟着定义的第一行字符串就是其<code>docstring</code>，可以通过<code>__doc__</code>来访问。</p>
+<h3 id="9-3-3-Instance-Objects"><a href="#9-3-3-Instance-Objects" class="headerlink" title="9.3.3. Instance Objects"></a>9.3.3. Instance Objects</h3><blockquote>
+<p>The only operations understood by instance objects are attribute references. There are two kinds of valid attribute names, data attributes and methods.</p>
+</blockquote>
+<p>类的实例也是一种对象，被称作<code>instance object</code>。对于实例对象而言，只能操作其属性，包括数据属性和方法</p>
+<blockquote>
+<p>if <code>x</code> is the instance of <code>MyClass</code> created above, the following piece of code will print the value <code>16</code>, without leaving a trace:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x.counter = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> x.counter &lt; <span class="number">10</span>:</span><br><span class="line">    x.counter = x.counter * <span class="number">2</span></span><br><span class="line">print(x.counter)</span><br><span class="line"><span class="keyword">del</span> x.counter</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>数据属性就是不是函数的其他属性，或者直觉理解的 <em>数据</em>。对一个实例而言，创建数据属性是不需要提前在类/实例中声明的。</p>
+<blockquote>
+<p>The other kind of instance attribute reference is a <em>method</em>. A method is a function that “belongs to” an object.</p>
+</blockquote>
+<p><em>方法</em> 是一种特殊的函数，是从属于对象的函数。在python中，不是类也可以有方法，例如list对象就可以有自己的方法。但是通常而言，方法指的是实例的函数。</p>
+<blockquote>
+<p> So in our example, <code>x.f</code> is a valid method reference, since <code>MyClass.f</code> is a function, but <code>x.i</code> is not, since <code>MyClass.i</code> is not. But <code>x.f</code> is not the same thing as <code>MyClass.f</code> — it is a <em>method object</em>, not a function object.</p>
+</blockquote>
+<p><em>实例的函数<em>，首先这个对象要是函数；其次必须是</em>实例</em> 的函数而不是 <em>类</em> 的函数。<code>x.f</code>是方法，而<code>MyClass.f</code>是函数。方法和函数最大的区别在于第一个变量，见下。</p>
+<h3 id="9-3-4-Method-Objects"><a href="#9-3-4-Method-Objects" class="headerlink" title="9.3.4. Method Objects"></a>9.3.4. Method Objects</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...	</span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">       <span class="keyword">return</span> <span class="string">'hello world'</span></span><br><span class="line"> ...</span><br><span class="line"> xf = x.f</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">   print(xf())</span><br></pre></td></tr></table></figure>
+
+<p>the special thing about methods is that the instance object is passed as the first argument of the function</p>
+</blockquote>
+<p>可以注意到，对<code>f</code>的定义表明它需要一个参数，但是调用的时候并没有传参，却也不会报错。这就是<em>方法</em> 特殊的地方：方法会将调用方法的实例对象作为函数的第一个参数。</p>
+<blockquote>
+<p>In our example, the call <code>x.f()</code> is exactly equivalent to <code>MyClass.f(x)</code></p>
+</blockquote>
+<p>事实上，既然方法特殊点在于将实例作为参数传入，那么我们就可以通过调用函数，并手动把特定的实例作为参数，就可以达到一样的效果。</p>
+<p>其中<code>self</code>是约定俗成的、用来表示当前实例的变量。当然可以用其他变量名，但是容易造成误解。</p>
+<h3 id="9-3-5-Class-and-Instance-Variables"><a href="#9-3-5-Class-and-Instance-Variables" class="headerlink" title="9.3.5. Class and Instance Variables"></a>9.3.5. Class and Instance Variables</h3><blockquote>
+<p>Generally speaking, instance variables are for data unique to each instance and class variables are for attributes and methods shared by all instances of the class:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>:</span></span><br><span class="line"></span><br><span class="line">    kind = <span class="string">'canine'</span>         <span class="comment"># class variable shared by all instances</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name    <span class="comment"># instance variable unique to each instance</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>通常而言，从属于类的变量是所有实例都共享的，从属于实例的对象是这个实例独享的。例如给<code>Dog</code>一个<code>canine</code>属性是合适的，因为所有的狗都是被驯化的生物。但是每只狗（狗的每个实例）都应该有自己的名字。</p>
+<p>如果把一个可变的对象作为类变量，并错误地使用（例如：修改），就会导致其他实例调用的这个属性也被修改了，这通常都是错误的。</p>
+<h2 id="9-4-Random-Remarks"><a href="#9-4-Random-Remarks" class="headerlink" title="9.4. Random Remarks"></a>9.4. Random Remarks</h2><blockquote>
+<p>Each value is an object, and therefore has a <em>class</em> (also called its <em>type</em>). It is stored as <code>object.__class__</code>.</p>
+</blockquote>
+<p>所有的变量都是对象，因此都会有类名（或者称为类型）。通过访问 <code>__class__</code> 可以获取这个对象的类名。</p>
+<h2 id="9-5-Inheritance"><a href="#9-5-Inheritance" class="headerlink" title="9.5. Inheritance"></a>9.5. Inheritance</h2><blockquote>
+<p>This can be useful, for example, when the base class is defined in another module:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DerivedClassName</span><span class="params">(modname.BaseClassName)</span>:</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>在继承的时候，基类可以直接从<code>module</code>中使用点分法引用。</p>
+<blockquote>
+<p>a method of a base class that calls another method defined in the same base class may end up calling a method of a derived class that overrides it. (For C++ programmers: all methods in Python are effectively <code>virtual</code>.)</p>
+</blockquote>
+<p>基类的任何一个方法都可以被派生类覆盖修改。按照C++的定义，python中的所有类都被<code>virtual</code>关键字修饰[^5]。</p>
+<blockquote>
+<p>An overriding method in a derived class may in fact want to extend rather than simply replace the base class method of the same name. There is a simple way to call the base class method directly: just call <code>BaseClassName.methodname(self, arguments)</code>. This is occasionally useful to clients as well. (Note that this only works if the base class is accessible as <code>BaseClassName</code> in the global scope.)</p>
+</blockquote>
+<p>如果不是要重写方法而是要扩展方法，可以通过调用基类的函数来实现。</p>
+<p><em>注意</em> ：是调用基类的函数而不是方法，因为要把<code>self</code>作为参数显式传进去。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Glossary <a href="https://docs.python.org/3/glossary.html#namespace" target="_blank" rel="noopener">namespace</a><br>[^2]: Python3 Glossary <a href="https://docs.python.org/3/glossary.html#attribute" target="_blank" rel="noopener">attribute</a><br>[^3]: 菜鸟教程：<a href="https://www.runoob.com/python3/python3-namespace-scope.html" target="_blank" rel="noopener">Python3 命名空间和作用域</a><br>[^4]: CSDN: <a href="https://blog.csdn.net/weixin_34303897/article/details/89324025" target="_blank" rel="noopener">Python Enclosing作用域</a><br>[^5]: CSDN: <a href="https://www.cnblogs.com/weiyouqing/p/7544988.html" target="_blank" rel="noopener">C++中virtual</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Introduction-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/" rel="prev" title="Introduction-4：模块介绍">
+      <i class="fa fa-chevron-left"></i> Introduction-4：模块介绍
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Introduction-6%EF%BC%9A%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/" rel="next" title="Introduction-6：迭代器与生成器">
+      Introduction-6：迭代器与生成器 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#9-Classes"><span class="nav-number">1.</span> <span class="nav-text">9. Classes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-Python-Scopes-and-Namespaces"><span class="nav-number">1.1.</span> <span class="nav-text">9.2. Python Scopes and Namespaces</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#namespace"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">namespace</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#attribute"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">attribute</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#namespace-lifetimes"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">namespace lifetimes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scope"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">scope</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#global-amp-nonlocal"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">global &amp; nonlocal</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-1-Scopes-and-Namespaces-Example"><span class="nav-number">1.1.1.</span> <span class="nav-text">9.2.1. Scopes and Namespaces Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-A-First-Look-at-Classes"><span class="nav-number">1.2.</span> <span class="nav-text">9.3. A First Look at Classes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-1-Class-Definition-Syntax"><span class="nav-number">1.2.1.</span> <span class="nav-text">9.3.1. Class Definition Syntax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-2-Class-Objects"><span class="nav-number">1.2.2.</span> <span class="nav-text">9.3.2. Class Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-3-Instance-Objects"><span class="nav-number">1.2.3.</span> <span class="nav-text">9.3.3. Instance Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-4-Method-Objects"><span class="nav-number">1.2.4.</span> <span class="nav-text">9.3.4. Method Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-5-Class-and-Instance-Variables"><span class="nav-number">1.2.5.</span> <span class="nav-text">9.3.5. Class and Instance Variables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-Random-Remarks"><span class="nav-number">1.3.</span> <span class="nav-text">9.4. Random Remarks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-Inheritance"><span class="nav-number">1.4.</span> <span class="nav-text">9.5. Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚注"><span class="nav-number">1.5.</span> <span class="nav-text">脚注</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jiawei Wu</p>
+  <div class="site-description" itemprop="description">This is my blog on Github</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">©2020 by Jiawei Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

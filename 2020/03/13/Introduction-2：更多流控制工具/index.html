@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lampv.github.io","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="4. More Control Flow Tools4.2. for Statements 1234# Strategy:  Iterate over a copyfor user, status in users.copy().items():    if status &#x3D;&#x3D; &#39;inactive&#39;:        del users[user]  遍历dict的时候是在遍历其keys，如果要获取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction-2：更多流控制工具">
+<meta property="og:url" content="http://lampv.github.io/2020/03/13/Introduction-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="Kiwi Book">
+<meta property="og:description" content="4. More Control Flow Tools4.2. for Statements 1234# Strategy:  Iterate over a copyfor user, status in users.copy().items():    if status &#x3D;&#x3D; &#39;inactive&#39;:        del users[user]  遍历dict的时候是在遍历其keys，如果要获取">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-13T13:19:02.117Z">
+<meta property="article:modified_time" content="2020-03-13T13:34:29.754Z">
+<meta property="article:author" content="Jiawei Wu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://lampv.github.io/2020/03/13/Introduction-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Introduction-2：更多流控制工具 | Kiwi Book</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kiwi Book</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">南风知我意</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>Schedule</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Introduction-2：更多流控制工具
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:19:02 / Modified: 21:34:29" itemprop="dateCreated datePublished" datetime="2020-03-13T21:19:02+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="4-More-Control-Flow-Tools"><a href="#4-More-Control-Flow-Tools" class="headerlink" title="4. More Control Flow Tools"></a>4. More Control Flow Tools</h1><h2 id="4-2-for-Statements"><a href="#4-2-for-Statements" class="headerlink" title="4.2. for Statements"></a>4.2. <code>for</code> Statements</h2><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Strategy:  Iterate over a copy</span></span><br><span class="line"><span class="keyword">for</span> user, status <span class="keyword">in</span> users.copy().items():</span><br><span class="line">    <span class="keyword">if</span> status == <span class="string">'inactive'</span>:</span><br><span class="line">        <span class="keyword">del</span> users[user]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>遍历dict的时候是在遍历其keys，如果要获取key-value，最好是使用 <code>.items()</code>。items() 方法把字典中每对 key 和 value 组成一个元组，并把这些元组放在列表中返回。</p>
+<p>需要注意的是，尽管可以 for .. in dict，dict并不是序列(sequence)，但是他是可迭代对象(iterable)[^1]。</p>
+<p>修改一个正在遍历中的字典很容易出错，可以通过copy方法产生一个拷贝，当然也可以对string或者list使用切片来做这件事。</p>
+<h2 id="4-4-break-and-continue-Statements-and-else-Clauses-on-Loops"><a href="#4-4-break-and-continue-Statements-and-else-Clauses-on-Loops" class="headerlink" title="4.4. break and continue Statements, and else Clauses on Loops"></a>4.4. <code>break</code> and <code>continue</code> Statements, and <code>else</code> Clauses on Loops</h2><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">10</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>, n):</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">if</span> n % x == <span class="number">0</span>:</span><br><span class="line"><span class="meta">... </span>            print(n, <span class="string">'equals'</span>, x, <span class="string">'*'</span>, n//x)</span><br><span class="line"><span class="meta">... </span>            <span class="keyword">break</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">else</span>:</span><br><span class="line"><span class="meta">... </span>        <span class="comment"># loop fell through without finding a factor</span></span><br><span class="line"><span class="meta">... </span>        print(n, <span class="string">'is a prime number'</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>尽管这么做通常不被推荐，python提供for-else的控制语句，在for结束之后执行else语句。如果使用<code>break</code>关键字跳出循环，则else <strong>不会</strong> 被执行。</p>
+<h2 id="4-6-Defining-Functions"><a href="#4-6-Defining-Functions" class="headerlink" title="4.6. Defining Functions"></a>4.6. Defining Functions</h2><blockquote>
+<p> thus, arguments are passed using <em>call by value</em> (where the <em>value</em> is always an object </p>
+<p><em>reference</em>, not the value of the object).</p>
+<p>Actually, <em>call by object reference</em> would be a better description, since if a mutable object is passed, the caller will see any changes the callee makes to it (items inserted into a list).</p>
+</blockquote>
+<p>函数的参数始终是其引用（而不是这个值）。尤其是当参数是list等可变对象的时候，函数内对参数的改动可以在函数外被<strong>立即</strong>看到。</p>
+<h2 id="4-7"><a href="#4-7" class="headerlink" title="4.7"></a>4.7</h2><h3 id="4-7-3-Special-parameters"><a href="#4-7-3-Special-parameters" class="headerlink" title="4.7.3. Special parameters"></a>4.7.3. Special parameters</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2)</span>:</span></span><br><span class="line">      -----------    ----------     ----------</span><br><span class="line">        |             |                  |</span><br><span class="line">        |        Positional <span class="keyword">or</span> keyword   |</span><br><span class="line">        |                                - Keyword only</span><br><span class="line">         -- Positional only</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>python3.8之后提供了<code>/</code>和<code>*</code> 来标志参数的特殊。在<code>/</code>之前的只能通过位置（而不能通过关键字）传参，在<code>*</code>之后的智能通过关键词传参。<code>/</code>和<code>*</code>都可以单独出现，并分别可以在参数的第一个与最后一个。</p>
+<p>positional-only参数有这样的用处：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(name, /, **kwds)</span>:</span></span><br></pre></td></tr></table></figure>
+
+<p>对于这样的函数，如果不指定第一个参数只能通过位置传递，则<code>**kwds</code>中不能接受以’name’为key的参数。</p>
+<p>还有如下的指导性原则：</p>
+<blockquote>
+<p>As guidance:</p>
+<ul>
+<li>Use positional-only if you want the name of the parameters to not be available to the user. This is useful when parameter names have no real meaning, if you want to enforce the order of the arguments when the function is called or if you need to take some positional parameters and arbitrary keywords.</li>
+<li>Use keyword-only when names have meaning and the function definition is more understandable by being explicit with names or you want to prevent users relying on the position of the argument being passed.</li>
+<li>For an API, use positional-only to prevent breaking API changes if the parameter’s name is modified in the future.</li>
+</ul>
+</blockquote>
+<h3 id="4-7-5-Unpacking-Argument-Lists"><a href="#4-7-5-Unpacking-Argument-Lists" class="headerlink" title="4.7.5. Unpacking Argument Lists"></a>4.7.5. Unpacking Argument Lists</h3><blockquote>
+<p>If they are not available separately, write the function call with the <code>*</code>-operator to unpack the arguments out of a list or tuple:</p>
+<p>…</p>
+<p>In the same fashion, dictionaries can deliver keyword arguments with the <code>**</code>-operator:</p>
+</blockquote>
+<p>使用<code>*</code>可以解包tuple和list类型，解包dict则需要使用<code>**</code>，解包效果为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">parrot</span><span class="params">(voltage, state=<span class="string">'a stiff'</span>, action=<span class="string">'voom'</span>)</span>:</span></span><br><span class="line"><span class="meta">... </span>    print(<span class="string">"-- This parrot wouldn't"</span>, action, end=<span class="string">' '</span>)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">"if you put"</span>, voltage, <span class="string">"volts through it."</span>, end=<span class="string">' '</span>)</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">"E's"</span>, state, <span class="string">"!"</span>)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">"voltage"</span>: <span class="string">"four million"</span>, <span class="string">"state"</span>: <span class="string">"bleedin' demised"</span>, <span class="string">"action"</span>: <span class="string">"VOOM"</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>parrot(**d)</span><br><span class="line">-- This parrot wouldn<span class="string">'t VOOM if you put four million volts through it. E'</span>s bleedin<span class="string">' demised !</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到解包之后：会将dict拆解为 <code>key1=value1, key2=value2, ...</code>的形式</p>
+<h3 id="4-7-7-Documentation-Strings"><a href="#4-7-7-Documentation-Strings" class="headerlink" title="4.7.7. Documentation Strings"></a>4.7.7. Documentation Strings</h3><blockquote>
+<p>The first line should always be a short, concise summary of the object’s purpose. For brevity, it should not explicitly state the object’s name or type, since these are available by other means (except if the name happens to be a verb describing a function’s operation). This line should begin with a capital letter and end with a period.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_function</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""Do nothing, but document it.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    No, really, it doesn't do anything.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>docstring的第一行应该是他的简要描述，并应该首字母大写，以<code>.</code>结尾。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Glossary <a href="https://docs.python.org/3/glossary.html#term-sequence" target="_blank" rel="noopener">term-sequence</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Introduction-1%EF%BC%9Apython%E7%9A%84%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BB%8B%E7%BB%8D/" rel="prev" title="Introduction-1：python的非正式介绍">
+      <i class="fa fa-chevron-left"></i> Introduction-1：python的非正式介绍
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Introduction-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="next" title="Introduction-3：数据结构">
+      Introduction-3：数据结构 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#4-More-Control-Flow-Tools"><span class="nav-number">1.</span> <span class="nav-text">4. More Control Flow Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-for-Statements"><span class="nav-number">1.1.</span> <span class="nav-text">4.2. for Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-break-and-continue-Statements-and-else-Clauses-on-Loops"><span class="nav-number">1.2.</span> <span class="nav-text">4.4. break and continue Statements, and else Clauses on Loops</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-Defining-Functions"><span class="nav-number">1.3.</span> <span class="nav-text">4.6. Defining Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7"><span class="nav-number">1.4.</span> <span class="nav-text">4.7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-3-Special-parameters"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.7.3. Special parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-5-Unpacking-Argument-Lists"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.7.5. Unpacking Argument Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-7-Documentation-Strings"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.7.7. Documentation Strings</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚注"><span class="nav-number">1.5.</span> <span class="nav-text">脚注</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jiawei Wu</p>
+  <div class="site-description" itemprop="description">This is my blog on Github</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">©2020 by Jiawei Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

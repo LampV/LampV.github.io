@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lampv.github.io","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="6. Modules6.1. More on Modules Note: For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction-4：模块介绍">
+<meta property="og:url" content="http://lampv.github.io/2020/03/13/Introduction-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:site_name" content="Kiwi Book">
+<meta property="og:description" content="6. Modules6.1. More on Modules Note: For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-13T13:22:27.741Z">
+<meta property="article:modified_time" content="2020-03-13T13:34:50.649Z">
+<meta property="article:author" content="Jiawei Wu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://lampv.github.io/2020/03/13/Introduction-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Introduction-4：模块介绍 | Kiwi Book</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kiwi Book</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">南风知我意</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>Schedule</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiawei Wu">
+      <meta itemprop="description" content="This is my blog on Github">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kiwi Book">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Introduction-4：模块介绍
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-13 21:22:27 / Modified: 21:34:50" itemprop="dateCreated datePublished" datetime="2020-03-13T21:22:27+08:00">2020-03-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="6-Modules"><a href="#6-Modules" class="headerlink" title="6. Modules"></a>6. Modules</h1><h2 id="6-1-More-on-Modules"><a href="#6-1-More-on-Modules" class="headerlink" title="6.1. More on Modules"></a>6.1. More on Modules</h2><blockquote>
+<p>Note:</p>
+<p>For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use <a href="https://docs.python.org/3/library/importlib.html#importlib.reload" target="_blank" rel="noopener"><code>importlib.reload()</code></a>, e.g. <code>import importlib;importlib.reload(modulename)</code>.</p>
+</blockquote>
+<p>在import之后更改module，修改并不会实时反馈到脚本/交互式窗口中。但是，使用<code>importlib.reload</code>可以重新加载。重新加载不会重新执行<code>init</code>模块的代码，不会立即删除旧模块的对象，如果在代码中重命名过模块，访问这个引用依然会指向旧模块[^1]。</p>
+<h3 id="6-1-2-The-Module-Search-Path"><a href="#6-1-2-The-Module-Search-Path" class="headerlink" title="6.1.2. The Module Search Path"></a>6.1.2. The Module Search Path</h3><blockquote>
+<p>The directory containing the script being run is placed at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is intended. </p>
+</blockquote>
+<p>在进行模块import的时候，会先搜索<code>script</code>所在的目录，再搜索标准库。因此，如果<code>script</code>目录下有一个和想要导入的模块相同的文件（如：<code>re.py</code>），在<code>import re</code> 的时候并不会导入预期的库，而是导入自己的<code>re.py</code>。除非刻意为之，通常这会导致错误。因此，<strong>不要</strong>以易混淆的名称为自己的文件命名。</p>
+<h2 id="6-3-The-dir-Function"><a href="#6-3-The-dir-Function" class="headerlink" title="6.3. The dir() Function"></a>6.3. The <a href="https://docs.python.org/3/library/functions.html#dir" target="_blank" rel="noopener"><code>dir()</code></a> Function</h2><blockquote>
+<p>The built-in function <code>dir()</code> is used to find out which names a module defines. It returns a sorted list of strings.</p>
+<p>Without arguments, <code>dir()</code> lists the names you have defined currently.</p>
+<p>Note that it lists all types of names: variables, modules, functions, etc.</p>
+<p><code>dir()</code> does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module <a href="https://docs.python.org/3/library/builtins.html#module-builtins" target="_blank" rel="noopener"><code>builtins</code></a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> builtins</span><br><span class="line">dir(builtins) </span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>可以通过<code>dir()</code>函数和<code>builtins</code>模块来获取命名空间的所有变量。</p>
+<h2 id="6-4"><a href="#6-4" class="headerlink" title="6.4"></a>6.4</h2><h3 id="6-4-1-Importing-From-a-Package"><a href="#6-4-1-Importing-From-a-Package" class="headerlink" title="6.4.1. Importing * From a Package"></a>6.4.1. Importing * From a Package</h3><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__all__ &#x3D; [&quot;echo&quot;, &quot;surround&quot;, &quot;reverse&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>This would mean that <code>from sound.effects import *</code> would import the three named submodules of the <code>sound</code> package.</p>
+<p>If <code>__all__</code> is not defined, the statement <code>from sound.effects import *</code> does <em>not</em> import all submodules from the package <code>sound.effects</code> into the current namespace; it only ensures that the package <code>sound.effects</code> has been imported (possibly running any initialization code in <code>__init__.py</code>) and then imports whatever names are defined in the package. This includes any names defined (and submodules explicitly loaded) by <code>__init__.py</code>.</p>
+</blockquote>
+<p><code>__init__.py</code>决定了 <code>import</code> 时的动作。定义<code>__all__</code> 可以帮助定义在<code>from m import *</code> 的时候要加载的 <strong>子模块</strong> 。如果没有定义 <code>__all__</code>， 在被<code>import</code>的模块中直接定义的变量<strong>依然会被</strong>加载，有区别的在于只有<code>__init__.py</code>中明确指定的子模块会被加载。</p>
+<p>无论如何，<code>from module import specific_submodule</code> 都是正确且被推荐的做法，避免因为命名冲突导致变量/函数被覆盖。</p>
+<h3 id="6-4-2-Intra-package-References"><a href="#6-4-2-Intra-package-References" class="headerlink" title="6.4.2. Intra-package References"></a>6.4.2. Intra-package References</h3><blockquote>
+<p>Note that relative imports are based on the name of the current module. Since the name of the main module is always <code>&quot;__main__&quot;</code>, modules intended for use as the main module of a Python application must always use absolute imports.</p>
+</blockquote>
+<p>从 Python 2.7 开始默认绝对导入。 python3.x 中的包内的模块导入原则编程了：如果要相对导入，那么一定是显式声明[^2]。同时文档又指出<code>__main__</code>自己就是父文件夹，所以在入口文件中使用相对引用会导致找不到相对路径。</p>
+<blockquote>
+<p>也就是说使用相对导入的文件不应该是要运行执行的文件，而应该只是外层调用的模块。但是如果你非要在packges里面做测试的话，那就不要使用相对导入[^2]。</p>
+</blockquote>
+<p>用如下文件结构进行测试</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">pkghome/                          Top-level package</span><br><span class="line">      __init__.py               	Initialize the sound package</span><br><span class="line">      auv/                  Subpackage <span class="keyword">for</span> auv</span><br><span class="line">              __init__.py</span><br><span class="line">              auv_env.py</span><br><span class="line">              anv_agent.py</span><br><span class="line">              ...</span><br><span class="line">      asv/                  Subpackage <span class="keyword">for</span> asv</span><br><span class="line">              __init__.py</span><br><span class="line">              asv.py</span><br><span class="line">              ...</span><br><span class="line">out_test.py</span><br></pre></td></tr></table></figure>
+
+<p>对此的测试结果如下：</p>
+<ol>
+<li><p>在<code>out_test.py</code>中绝对引用<code>import pkghome</code> </p>
+<p><strong>成功</strong>， 是标准的同级引用包方式</p>
+</li>
+<li><p>在<code>out_test.py</code>中相对引用<code>from . import pkghome</code></p>
+<p><strong>报错</strong>， 没有父文件夹无法相对引用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ImportError: attempted relative <span class="keyword">import</span> <span class="keyword">with</span> no known parent package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>pkghome/__init__.py</code>中绝对引用<code>import  pkghome.auv</code>，运行<code>out_test.py</code></p>
+<p><em>注：实际运行的是<code>out_test</code>文件，但其对pkghome的引用会执行<code>__init__</code>文件</em></p>
+<p><strong>报错</strong>，从<code>out_test</code>文件往下看能看到<code>pkghome.auv</code></p>
+</li>
+<li><p>在<code>pkghome/__init__.py</code>中绝对引用<code>import  pkghome.auv</code>，运行<code>__init__.py</code></p>
+<p><strong>失败</strong>，对于<code>__init__.py</code>文件的目录层级而言，没有<code>pkghome</code>这个包，只有<code>auv</code>和<code>asv</code>包。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'pkghome'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>auv/__init__.py</code>中绝对引用<code>import pkghome.asv</code>， 运行<code>out_test.py</code></p>
+<p><em>注：<code>out_test</code>文件对auv的引用会执行<code>pkghome/__init__</code>文件，而这个文件中对<code>auv</code>的引用会执行<code>auv/__init__</code>文件</em></p>
+<p><strong>成功</strong>， 标准的绝对引用</p>
+</li>
+<li><p>在<code>auv/__init__.py</code>中绝对引用<code>import pkghome.asv</code>， 运行<code>auv/__init__.py</code></p>
+<p><strong>报错</strong>， 同4.</p>
+</li>
+<li><p>在<code>auv/__init__.py</code>中相对引用<code>from .. import asv</code>， 运行<code>out_test.py</code></p>
+<p><strong>成功</strong>， 标准的相对引用</p>
+</li>
+<li><p>在<code>auv/__init__.py</code>中相对引用<code>from .. import asv</code>， 运行<code>pkghome/__init__.py</code></p>
+<p><em>注：这样运行会报错，见4. 为此，将<code>pkghome/__init__.py</code>内容改为<code>import auv</code> 见5.</em></p>
+<p><strong>报错</strong>，查找目录到<code>pkghome/__init__.py</code>同级为止，无法到达<code>pkghome</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ValueError: attempted relative <span class="keyword">import</span> beyond top-level package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>auv/__init__.py</code>中相对引用<code>from .. import asv</code>， 运行<code>auv/__init__.py</code></p>
+<p><strong>报错</strong>， 同2. 当执行脚本中出现相对引用，会找不到路径（因为路径根据当前文件确定，见文档）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ImportError: attempted relative <span class="keyword">import</span> <span class="keyword">with</span> no known parent package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>pkghome/__init__.py</code>中隐式相对引用<code>import asv</code>， 运行<code>out_test.py</code></p>
+<p><strong>报错</strong>，隐式相对引用现在已经被禁止，这样写会默认查找顶级的<code>asv</code>包，而不是同级。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'auv'</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<p>对此可以得出一组结论：</p>
+<ul>
+<li>不管是绝对引用还是相对引用，入口脚本位置都决定了能不能解析这个包。这实际上是由查找路径决定的。</li>
+<li>隐式相对引用已经被废止，即使是同级模块也应该使用<code>from . import</code> 或者<code>from .module import</code></li>
+<li>进行了相对引用的文件不能被直接执行，否则会无法找到相对路径。</li>
+</ul>
+<p>更多的补充测试可以参考CSDN 博客[^2]</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Library <a href="https://docs.python.org/3/library/importlib.html#importlib.reload" target="_blank" rel="noopener">importlib.reload</a><br>[^2]: CSDN：<a href="https://blog.csdn.net/pipisorry/article/details/43313197" target="_blank" rel="noopener">python模块导入及属性：import</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Introduction-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="prev" title="Introduction-3：数据结构">
+      <i class="fa fa-chevron-left"></i> Introduction-3：数据结构
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Introduction-5%EF%BC%9A%E7%B1%BB%E4%B8%8E%E7%B1%BB%E7%9B%B8%E5%85%B3/" rel="next" title="Introduction-5：类与类相关">
+      Introduction-5：类与类相关 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Modules"><span class="nav-number">1.</span> <span class="nav-text">6. Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-More-on-Modules"><span class="nav-number">1.1.</span> <span class="nav-text">6.1. More on Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-2-The-Module-Search-Path"><span class="nav-number">1.1.1.</span> <span class="nav-text">6.1.2. The Module Search Path</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-The-dir-Function"><span class="nav-number">1.2.</span> <span class="nav-text">6.3. The dir() Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4"><span class="nav-number">1.3.</span> <span class="nav-text">6.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-1-Importing-From-a-Package"><span class="nav-number">1.3.1.</span> <span class="nav-text">6.4.1. Importing * From a Package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-2-Intra-package-References"><span class="nav-number">1.3.2.</span> <span class="nav-text">6.4.2. Intra-package References</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚注"><span class="nav-number">1.4.</span> <span class="nav-text">脚注</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jiawei Wu</p>
+  <div class="site-description" itemprop="description">This is my blog on Github</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">©2020 by Jiawei Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
