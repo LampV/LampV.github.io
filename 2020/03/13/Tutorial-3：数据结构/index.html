@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"lampv.github.io","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="3. An Informal Introduction to Python3.1.2 Strings One way to remember how slices work is to think of the indices as pointing between characters, with the left edge of the first character numbered 0.">
+  <meta name="description" content="5. Data Structures5.1. More on Lists list.&#96;&#96;copy() Return a shallow copy of the list. Equivalent to a[:].  在需要使用列表浅拷贝的时候，可以使用copy()方法，可读性比[:]略好。 5.1.2. Using Lists as Queues 12345678910&gt;&gt;&gt; fr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3. An Informal Introduction to Python">
-<meta property="og:url" content="http://lampv.github.io/2020/03/13/Introduction-1%EF%BC%9Apython%E7%9A%84%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="5. Data Structures">
+<meta property="og:url" content="http://lampv.github.io/2020/03/13/Tutorial-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Kiwi Book">
-<meta property="og:description" content="3. An Informal Introduction to Python3.1.2 Strings One way to remember how slices work is to think of the indices as pointing between characters, with the left edge of the first character numbered 0.">
+<meta property="og:description" content="5. Data Structures5.1. More on Lists list.&#96;&#96;copy() Return a shallow copy of the list. Equivalent to a[:].  在需要使用列表浅拷贝的时候，可以使用copy()方法，可读性比[:]略好。 5.1.2. Using Lists as Queues 12345678910&gt;&gt;&gt; fr">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-13T12:32:44.000Z">
-<meta property="article:modified_time" content="2020-03-14T13:02:15.990Z">
+<meta property="article:published_time" content="2020-03-13T12:34:44.000Z">
+<meta property="article:modified_time" content="2020-03-17T12:58:36.019Z">
 <meta property="article:author" content="Jiawei Wu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://lampv.github.io/2020/03/13/Introduction-1%EF%BC%9Apython%E7%9A%84%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BB%8B%E7%BB%8D/">
+<link rel="canonical" href="http://lampv.github.io/2020/03/13/Tutorial-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>3. An Informal Introduction to Python | Kiwi Book</title>
+  <title>5. Data Structures | Kiwi Book</title>
   
 
 
@@ -171,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Introduction-1%EF%BC%9Apython%E7%9A%84%E9%9D%9E%E6%AD%A3%E5%BC%8F%E4%BB%8B%E7%BB%8D/">
+    <link itemprop="mainEntityOfPage" href="http://lampv.github.io/2020/03/13/Tutorial-3%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -184,7 +184,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          3. An Informal Introduction to Python
+          5. Data Structures
         </h1>
 
         <div class="post-meta">
@@ -194,14 +194,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-03-13 20:32:44" itemprop="dateCreated datePublished" datetime="2020-03-13T20:32:44+08:00">2020-03-13</time>
+              <time title="Created: 2020-03-13 20:34:44" itemprop="dateCreated datePublished" datetime="2020-03-13T20:34:44+08:00">2020-03-13</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-14 21:02:15" itemprop="dateModified" datetime="2020-03-14T21:02:15+08:00">2020-03-14</time>
+                <time title="Modified: 2020-03-17 20:58:36" itemprop="dateModified" datetime="2020-03-17T20:58:36+08:00">2020-03-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,7 +213,7 @@
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python%E7%AC%94%E8%AE%B0/Introduction/" itemprop="url" rel="index"><span itemprop="name">Introduction</span></a>
+                  <a href="/categories/Python%E7%AC%94%E8%AE%B0/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
                 </span>
             </span>
 
@@ -228,20 +228,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="3-An-Informal-Introduction-to-Python"><a href="#3-An-Informal-Introduction-to-Python" class="headerlink" title="3. An Informal Introduction to Python"></a>3. An Informal Introduction to Python</h1><h3 id="3-1-2-Strings"><a href="#3-1-2-Strings" class="headerlink" title="3.1.2 Strings"></a>3.1.2 Strings</h3><blockquote>
-<p>One way to remember how slices work is to think of the indices as pointing <em>between</em> characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of <em>n</em> characters has index <em>n</em>, for example:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> +---+---+---+---+---+---+</span><br><span class="line"> | P | y | t | h | o | n |</span><br><span class="line"> +---+---+---+---+---+---+</span><br><span class="line"> 0   1   2   3   4   5   6</span><br><span class="line">-6  -5  -4  -3  -2  -1</span><br></pre></td></tr></table></figure>
+        <h1 id="5-Data-Structures"><a href="#5-Data-Structures" class="headerlink" title="5. Data Structures"></a>5. Data Structures</h1><h2 id="5-1-More-on-Lists"><a href="#5-1-More-on-Lists" class="headerlink" title="5.1. More on Lists"></a>5.1. More on Lists</h2><blockquote>
+<p><code>list.``copy</code>()</p>
+<p>Return a shallow copy of the list. Equivalent to <code>a[:]</code>.</p>
 </blockquote>
-<p>切片是非常常用的语法，可以字符串中截取出一段。在指定slices范围的时候，实际上是选择位于字母<strong>之间</strong>的分隔符。这样就很容易理解 s[0:3]的长度是3，s[3:5]是第3、第4个字母(0-index)。</p>
-<h3 id="3-1-3-Lists"><a href="#3-1-3-Lists" class="headerlink" title="3.1.3 Lists"></a>3.1.3 Lists</h3><blockquote>
-<p>Lists might contain items of different types, but usually the items all have the same type.</p>
+<p>在需要使用列表浅拷贝的时候，可以使用copy()方法，可读性比[:]略好。</p>
+<h3 id="5-1-2-Using-Lists-as-Queues"><a href="#5-1-2-Using-Lists-as-Queues" class="headerlink" title="5.1.2. Using Lists as Queues"></a>5.1.2. Using Lists as Queues</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue = deque([<span class="string">"Eric"</span>, <span class="string">"John"</span>, <span class="string">"Michael"</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.append(<span class="string">"Terry"</span>)           <span class="comment"># Terry arrives</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.append(<span class="string">"Graham"</span>)          <span class="comment"># Graham arrives</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.popleft()                 <span class="comment"># The first to arrive now leaves</span></span><br><span class="line"><span class="string">'Eric'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue.popleft()                 <span class="comment"># The second to arrive now leaves</span></span><br><span class="line"><span class="string">'John'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>queue                           <span class="comment"># Remaining queue in order of arrival</span></span><br><span class="line">deque([<span class="string">'Michael'</span>, <span class="string">'Terry'</span>, <span class="string">'Graham'</span>])</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p>列表可以包含不同类型的元素，尽管通常是同一类型的。这很好理解，因为python的底层数据结构实现上，所有的对象都是继承了PyObject对象，而list中存放的指针是PyObject类型的指针<a href="知乎专栏：[源码读python](https://zhuanlan.zhihu.com/p/34410799)">^1</a></p>
-<blockquote>
-<p>All slice operations return a new list containing the requested elements. This means that the following slice returns a <a href="https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy" target="_blank" rel="noopener">shallow copy</a> of the list.</p>
+<p>使用list也可以实现queue，但是list在头部插入元素很麻烦。相比之下，使用双端队列deque可以简单一些，但是空间占用会增加。<code>deque</code>是<code>double-ends queue</code>的缩写[^1]。</p>
+<h3 id="5-1-4-Nested-List-Comprehensions"><a href="#5-1-4-Nested-List-Comprehensions" class="headerlink" title="5.1.4. Nested List Comprehensions"></a>5.1.4. Nested List Comprehensions</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>matrix = [</span><br><span class="line"><span class="meta">... </span>    [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line"><span class="meta">... </span>    [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>],</span><br><span class="line"><span class="meta">... </span>    [<span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>],</span><br><span class="line"><span class="meta">... </span>]</span><br></pre></td></tr></table></figure>
+
+<p>In the real world, you should prefer built-in functions to complex flow statements. The <a href="https://docs.python.org/3/library/functions.html#zip" target="_blank" rel="noopener"><code>zip()</code></a>function would do a great job for this use case:</p>
+<p>&gt;&gt;&gt;</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(zip(*matrix))</span><br><span class="line">[(<span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>), (<span class="number">2</span>, <span class="number">6</span>, <span class="number">10</span>), (<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>), (<span class="number">4</span>, <span class="number">8</span>, <span class="number">12</span>)]</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p>列表也有切片，切片的索引规则和str切片一致。列表切片总是返回一个列表，且是一个浅拷贝。对于列表这种可变对象而言，也可以通过切片的方式指定列表的一部分，并对其修改，而str不行。</p>
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2>
+<p>通过zip(*)的方式可以很简单地进行类似矩阵转置的操作。注意zip的结果是一个generator，需要显式转换为list。</p>
+<h2 id="5-4-Sets"><a href="#5-4-Sets" class="headerlink" title="5.4. Sets"></a>5.4. Sets</h2><blockquote>
+<p>Note: to create an empty set you have to use <code>set()</code>, not <code>{}</code></p>
+</blockquote>
+<p>set和dict都用{}包括，在创建新的set的时候必须使用<code>set()</code>以与dict区分。</p>
+<h2 id="5-5-Dictionaries"><a href="#5-5-Dictionaries" class="headerlink" title="5.5. Dictionaries"></a>5.5. Dictionaries</h2><blockquote>
+<p>When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict(sape=<span class="number">4139</span>, guido=<span class="number">4127</span>, jack=<span class="number">4098</span>)</span><br><span class="line">&#123;<span class="string">'sape'</span>: <span class="number">4139</span>, <span class="string">'guido'</span>: <span class="number">4127</span>, <span class="string">'jack'</span>: <span class="number">4098</span>&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>创建字典的时候，如果是用简单的字符串做键，可以直接以关键字指定的方式创建。</p>
+<h2 id="5-7-More-on-Conditions"><a href="#5-7-More-on-Conditions" class="headerlink" title="5.7. More on Conditions"></a>5.7. More on Conditions</h2><blockquote>
+<p>The Boolean operators <code>and</code> and <code>or</code> are so-called <em>short-circuit</em> operators: their arguments are evaluated from left to right, and evaluation stops as soon as the outcome is determined. For example, if <code>A</code> and <code>C</code> are true but <code>B</code> is false, <code>A and B and C</code> does not evaluate the expression <code>C</code>.</p>
+</blockquote>
+<p>在进行<code>and</code> 与 <code>or</code> 的判断的时候，只要结果出现，后续的表达式将不被运算。这通常被称为“短路运算符”。</p>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>[^1]: Python3 Library <a href="https://docs.python.org/3/library/collections.html#collections.deque" target="_blank" rel="noopener">collections.deque</a>  </p>
+
     </div>
 
     
@@ -256,12 +274,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/13/Python%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%89%8D%E8%A8%80/" rel="prev" title="前言">
-      <i class="fa fa-chevron-left"></i> 前言
+    <a href="/2020/03/13/Tutorial-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/" rel="prev" title="4. More Control Flow Tools">
+      <i class="fa fa-chevron-left"></i> 4. More Control Flow Tools
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/03/13/Introduction-2%EF%BC%9A%E6%9B%B4%E5%A4%9A%E6%B5%81%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/" rel="next" title="4. More Control Flow Tools">
-      4. More Control Flow Tools <i class="fa fa-chevron-right"></i>
+    <a href="/2020/03/13/Tutorial-4%EF%BC%9A%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D/" rel="next" title="6. Modules">
+      6. Modules <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -322,7 +340,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#3-An-Informal-Introduction-to-Python"><span class="nav-number">1.</span> <span class="nav-text">3. An Informal Introduction to Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-Strings"><span class="nav-number">1.0.1.</span> <span class="nav-text">3.1.2 Strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-Lists"><span class="nav-number">1.0.2.</span> <span class="nav-text">3.1.3 Lists</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚注"><span class="nav-number">1.1.</span> <span class="nav-text">脚注</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Data-Structures"><span class="nav-number">1.</span> <span class="nav-text">5. Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-More-on-Lists"><span class="nav-number">1.1.</span> <span class="nav-text">5.1. More on Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-Using-Lists-as-Queues"><span class="nav-number">1.1.1.</span> <span class="nav-text">5.1.2. Using Lists as Queues</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-4-Nested-List-Comprehensions"><span class="nav-number">1.1.2.</span> <span class="nav-text">5.1.4. Nested List Comprehensions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-Sets"><span class="nav-number">1.2.</span> <span class="nav-text">5.4. Sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-Dictionaries"><span class="nav-number">1.3.</span> <span class="nav-text">5.5. Dictionaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-More-on-Conditions"><span class="nav-number">1.4.</span> <span class="nav-text">5.7. More on Conditions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚注"><span class="nav-number">1.5.</span> <span class="nav-text">脚注</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -370,6 +388,8 @@
     <footer class="footer">
       <div class="footer-inner">
         
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP备19050949号-1 </a>
+  </div>
 
 <div class="copyright">
   
